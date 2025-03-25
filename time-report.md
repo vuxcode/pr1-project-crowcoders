@@ -9,5 +9,5 @@ For example:
   - Tried some variations with changing buttons, button types and changing button color. Trying out some CSS-based changes.
     
 - 2025-03-25 10.00
-  - Uploaded the prototype file(s) to GitHub since I forgot to do some yesterday. 
+  - Uploaded the prototype file(s) to GitHub since I forgot to do so yesterday. 
   
