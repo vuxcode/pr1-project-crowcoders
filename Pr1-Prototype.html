@@ -3,22 +3,45 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming Prototype</title>
+
+
+  <style> /* CSS that changes button color when pressed/focused. This does not require JS to work */
+    button:focus {
+      outline:none;
+      border:1px solid black;
+    }
+    #demo1:focus {
+      background-color: goldenrod;
+      color:black
+    }
+    #demo2:focus {
+      background-color: blueviolet;
+      color: white
+    }
+  </style>
   </head>
 
 <body>
-    <p class="intro">Click the button below to win!</p>
+    <p class="instructions">Click the buttons below!</p>
 
-    <button onclick="victory()">Click Me!</button>
+    <button id="demo1" onclick="changeColor">Click Me!</button>
+    <button id="demo2" onclick="changeColor">Click ME!</button>
+
+    <input type="checkbox" id="demo3">
+    <label for="demo3"></label>
 
 </body>
 
 <script>
-// Declare variable 
-var victoryMessage = "You won!";
+// Create function to change button colors
+function changeColor(newColor) {
+    // Find demo element
+    var output = document.getElementById("demo1", "demo2");
+    // Confirm output with console.log
+    console.log(output);
+    // Change color of button
+    output.style = newColor;
+    output.innerHTML = newColor;
 
-// Create a message function
-function victory() {
-    // Give output to the user
-alert(victoryMessage);
 }
 </script>
