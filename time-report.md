@@ -15,5 +15,6 @@
 
   **Wednesday, 2025-03-26**
   - 08.30 - 10.00(?): (Programming) Further research into buttons and functions. Realized the original idea (Lights Out) might be a little too complicated for me. Considering changing idea to making a TicTacToe game instead, since there are more resources readily 
-  available for that type of game. Attended workshop to discuss w/ teacher. Got the OK to change idea if I wanted to.
+  available for that type of game.
+  - 12.30 - 13.00: Attended workshop to discuss w/ teacher. Got the OK to change idea if I wanted to.
   - 16.00: (Programming) Might've had an Eureka moment. Will continue with Lights Out for now. Need to do more reading on loops and jQuery.
