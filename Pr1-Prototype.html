@@ -14,20 +14,20 @@
 <body>
     <p class="intro">Click the button below!</p>
 
-    <button class="b1">a</button>
-    <button class="b2">b</button>
-    <button class="b3">c</button>
-    <button class="b4">d</button>
+    <button id="b1">a</button>
+    <button id="b2">b</button>
+    <button id="b3">c</button>
+    <button id="b4">d</button>
 
 </body>
 
 <script>
-  // Select buttons with their ID, store in new variables
-  var button1 = document.querySelector('b1');
-  var button2 = document.querySelector('b2');
-  var button3 = document.querySelector('b3');
-  var button4 = document.querySelector('b4');
-  console.log(button2);
+  // Store buttons in new vars
+  var button1 = document.getElementById('b1');
+  var button2 = document.getElementById('b2');
+  var button3 = document.getElementById('b3');
+  var button4 = document.getElementById('b4');
+  console.log(button1);
 
   // Create function to style the buttons
   function buttonColor() {
