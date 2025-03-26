@@ -7,38 +7,41 @@
     <style>
       .button {
         background-color: gold;
+        text-align: center;
+        width: 200px;
+        border: 2px solid darkgoldenrod;
+        border-radius: 4px;
+      }
+      .button:hover {
+        border: 2px solid darkorange;
       }
     </style>
   </head>
 
 <body>
-    <p class="intro">Click the button below!</p>
+    <p class="intro">Click the buttons below!</p>
 
-    <button id="b1">a</button>
-    <button id="b2">b</button>
-    <button id="b3">c</button>
-    <button id="b4">d</button>
+  <button id="b1">a</button>
+   
+
 
 </body>
 
 <script>
-  // Store buttons in new vars
-  var button1 = document.getElementById('b1');
-  var button2 = document.getElementById('b2');
-  var button3 = document.getElementById('b3');
-  var button4 = document.getElementById('b4');
-  console.log(button1);
+  // Store button in new vars
+  var myButton = document.getElementById('b1');
+  console.log(myButton);
 
   // Create function to style the buttons
   function buttonColor() {
-    button2.style.backgroundColor = 'blueviolet';
-    button3.style.backgroundColor = 'blueviolet';
-    button4.style.backgroundColor = 'blueviolet';
+    myButton.style.backgroundColor = 'blueviolet';
   }
+/*   function buttonColor2() {
+    myButton.style.backgroundColor = 'gold';
+  } */
 
-  button1.addEventListener('click', buttonColor);
-
-
-
+  myButton.addEventListener("click", buttonColor);
+  // myButton.addEventListener("click", buttonColor2);
+  
 
 </script>
