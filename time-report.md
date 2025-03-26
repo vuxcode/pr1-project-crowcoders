@@ -12,4 +12,8 @@
 **Tuesday, 2025-03-25**
   - 10.00: (Programming) Uploaded the prototype file(s) to GitHub since I forgot to do so yesterday.
   - 13.00: (Webdev) Did some more research/inspiration searching regarding the layout for the main webpage. Looked at different color schemes, haven't decided on one yet though.
-  
+
+  **Wednesday, 2025-03-26**
+  - 08.30 - 10.00(?): (Programming) Further research into buttons and functions. Realized the original idea (Lights Out) might be a little too complicated for me. Considering changing idea to making a TicTacToe game instead, since there are more resources readily 
+  available for that type of game. Attended workshop to discuss w/ teacher. Got the OK to change idea if I wanted to.
+  - 16.00: (Programming) Might've had an Eureka moment. Will continue with Lights Out for now. Need to do more reading on loops and jQuery.
