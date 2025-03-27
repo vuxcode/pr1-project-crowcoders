@@ -2,6 +2,7 @@
 
 > Write about what you have done and how long you have worked on each part of the project.
 
+###Note: Timestamps are approximate and not exact.
 
 **Monday, 2025-03-24**
 
@@ -18,3 +19,7 @@
   available for that type of game.
   - 12.30 - 13.00: Attended workshop to discuss w/ teacher. Got the OK to change idea if I wanted to.
   - 16.00: (Programming) Might've had an Eureka moment. Will continue with Lights Out for now. Need to do more reading on loops and jQuery.
+
+  **Thursday, 2025-03-27**
+  - 10.00 - 13.00: (Both) Had another go at creating something basic with things I'm more confident in (CSS). Got a basic game board going.  
+  
