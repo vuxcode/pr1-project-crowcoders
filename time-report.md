@@ -2,7 +2,7 @@
 
 > Write about what you have done and how long you have worked on each part of the project.
 
-###Note: Timestamps are approximate and not exact.
+Note: Timestamps are approximate and not exact
 
 **Monday, 2025-03-24**
 
