@@ -21,5 +21,6 @@
   - 16.00: (Programming) Might've had an Eureka moment. Will continue with Lights Out for now. Need to do more reading on loops and jQuery.
 
   **Thursday, 2025-03-27**
-  - 10.00 - 13.00: (Both) Had another go at creating something basic with things I'm more confident in (CSS). Got a basic game board going.  
+  - 10.00 - 13.00: (Both) Had another go at creating something basic with things I'm more confident in (CSS). Got a basic game board and CSS going.
+  - 13.00 - 1400: (Both) Uploaded new commit to index.html with a basic template that I'll keep working with.
   
