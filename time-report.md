@@ -31,3 +31,4 @@ Became ill, and did not spend any major time on the FInal Project. Created new P
 
 ## Week 15 (Week 2 in the Project Timeline)
 **Wednesday, 2025-04-09**
+Uplaoded the main working files mentioned above. Did some more research into code structures and found some CSS to try out. Tried using loops to create a row of divs with mixed results (~1 hr? total). 
