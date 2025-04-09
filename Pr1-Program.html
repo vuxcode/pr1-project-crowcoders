@@ -4,9 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programming Prototype</title>
 
-    <!-- Experimenting with basic layout, naming conventions, code structure -->
-
-    <style> /* Resetting default style, fixed the "bugging out" when hovering over tiles */
+    <style> /* Resetting browser styles */
       * {
         margin: 0;
         padding: 0;
@@ -14,7 +12,7 @@
       }
     </style>
 
-    <style> /* CSS for the game board */
+    <style> /* CSS for the game */
       #gameBoard {
       text-align: center;
       }
@@ -23,9 +21,9 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-style: italic;
       }
-    .row {
+/*     .row {
       display: block;
-      }
+      } */
     .tile {
       display: inline-block;
       width:40px;
@@ -46,147 +44,18 @@
     <p class="intro">Click the buttons below!</p>
 
     <div id="gameBoard">
-
-      <!--Row 1: 4 tiles -->
-      <div id="row1" class="row">
-        <div class="tile">
-            <div id="r1c1" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r1c2" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r1c3" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r1c4" class="light off"></div>
-        </div>
+      <script>
+        var htmlElements = "";
+        // Use for-loop to print out the first row of divs
+        for (var i = 1; i < 8; i++) {
+          htmlElements += `<div class="tile">${i}</div>`
+        }
+        var tile = document.getElementById("tile");
+        tile.innerHTML = htmlElements;
+        // Confirming that the program does print the HTML, it just doesn't render it.
+        console.log(htmlElements); 
+      </script>      
     </div>
-
-    <!--Row 2: 5 tiles-->
-    <div id="row2" class="row">
-        <div class="tile">
-            <div id="r2c1" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r2c2" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r2c3" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r2c4" class="light off"></div>
-        </div>
-        <div class="tile">
-          <div id="r2c5" class="light off"></div>
-      </div>
-    </div>
-
-     <!--Row 3: 6 tiles-->
-    <div id="row3" class="row">
-        <div class="tile">
-            <div id="r3c1" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r3c2" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r3c3" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r3c4" class="light off"></div>
-        </div>
-        <div class="tile">
-          <div id="r2c5" class="light off"></div>
-        </div>
-        <div class="tile">
-          <div id="r2c6" class="light off"></div>
-         </div>
-    </div>
-
-    <!--Row 4: 7 tiles-->
-    <div id="row4" class="row">
-        <div class="tile">
-            <div id="r4c1" class="light off"></div>
-        </div>
-        <div class="tile">
-           <div id="r4c2" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r4c3" class="light off"></div>
-        </div>
-        <div class="tile">
-            <div id="r4c4" class="light off""></div>
-        </div>
-        <div class="tile">
-          <div id="r4c5" class="light off"></div>
-        </div>
-        <div class="tile">
-          <div id="r4c6" class="light off"></div>
-        </div>
-        <div class="tile">
-          <div id="r4c7" class="light off"></div>
-        </div>
-    </div>
-
-        <!--Row 5: 6 tiles-->
-      <div id="row5" class="row">
-        <div class="tile">
-            <div id="r5c1" class="light off"></div>
-          </div>
-        <div class="tile">
-            <div id="r5c2" class="light off"></div>
-          </div>
-        <div class="tile">
-            <div id="r5c3" class="light off"></div>
-          </div>
-        <div class="tile">
-            <div id="r5c4" class="light off"></div>
-        </div>
-          <div class="tile">
-          <div id="r5c5" class="light off"></div>
-          </div>
-        <div class="tile">
-          <div id="r5c6" class="light off"></div>
-        </div>
-    </div>
-
-    <!--Row 6: 5 tiles-->
-    <div id="row6" class="row">
-      <div class="tile">
-          <div id="r6c1" class="light off"></div>
-      </div>
-      <div class="tile">
-          <div id="r6c2" class="light off"></div>
-      </div>
-      <div class="tile">
-          <div id="r6c3" class="light off"></div>
-      </div>
-      <div class="tile">
-          <div id="r6c4" class="light off"></div>
-      </div>
-      <div class="tile">
-        <div id="r6c5" class="light off"></div>
-    </div>
-  </div>
-
-    <!--Row 7: 4 tiles-->
-    <div id="row7" class="row">
-      <div class="tile">
-          <div id="r7c1" class="light off"></div>
-      </div>
-      <div class="tile">
-          <div id="r7c2" class="light off"></div>
-      </div>
-      <div class="tile">
-          <div id="r7c3" class="light off"></div>
-      </div>
-      <div class="tile">
-          <div id="r7c4" class="light off"></div>
-      </div>
-  </div>
-
-  </div>
  
  <script>
 /*JS goes here*/
