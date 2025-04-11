@@ -27,8 +27,10 @@ Note: Timestamps are approximate and not exact
 ## Week 14 (Week 1 in terms of 10 week project-timeline)
 **Week summary, Monday - Friday, 31/3 - 4/4**
 
-Became ill, and did not spend any major time on the FInal Project. Created new Project Files (*We1-Website.html* & *Pr1-Program.html*), where I intend to code the website and the Game. I still attended lessons online and did code-along. 
+Became ill, and did not spend any major time on the Final Project. Created new Project Files (*We1-Website.html* & *Pr1-Program.html*), where I intend to code the website and the Game. I still attended lessons online and did code-along. 
 
 ## Week 15 (Week 2 in the Project Timeline)
 **Wednesday, 2025-04-09**
-Uplaoded the main working files mentioned above. Did some more research into code structures and found some CSS to try out. Tried using loops to create a row of divs with mixed results (~1 hr? total). 
+(~1 hr? total). Still a bit sick, but continued researching and doing other smaller tasks: (Both) Uplaoded the main working files mentioned above. Did some more research into code structures and found some CSS to try out. Tried using loops to create a row of divs with mixed results.
+**Friday, 2025-04-11**
+- 10.00(??) - 13.30: (Webdev) Wrote basic HTML and CSS for the website. Mapped out rough placement of core features and visuals I want the page to have. 
