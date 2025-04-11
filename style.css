@@ -1,0 +1,71 @@
+/* Resetting browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    height: 100px;
+    background-color: paleturquoise;
+}
+
+main {
+    overflow: hidden;
+    background-image: linear-gradient(navy,darkgrey);
+}
+
+/* Defining Main Page size */
+.page {
+    width: 950px;
+    margin: 0 auto;
+    background-color:bisque;
+}
+nav {
+    float: left;
+    width: 200px;
+    height: 300px;
+    background-color: silver;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 10px;
+}
+
+article { /* "Content" container*/
+    float: left;
+    width: 750;
+    height: 600px;
+    padding: 10px;
+    background-color: bisque;
+}
+
+menu {
+    height: 100px;
+    background-color: #333;
+    border-radius: 5px;
+    list-style-type: none;
+}
+menu li a {
+    display: block;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+menu li a:hover {
+    background-color: slategrey;
+    border-radius: 5px;;
+}
+
+.gameBoard {
+    float: left;
+    width: 650px;
+    height: 500px;
+    padding: 20px;
+    /* aspect-ratio: 700 / 600; */
+    background-color: darkcyan;
+}
+
+footer {
+    background-color: antiquewhite;
+}
