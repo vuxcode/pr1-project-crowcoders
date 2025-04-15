@@ -35,20 +35,6 @@
       padding:0;
       margin: 0;
       }
-
-      .tile2 {
-      display: inline-block;
-      height: 40px; /* adjust to control the size  */
-      aspect-ratio: cos(30deg);
-      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
-      border:1px solid red;
-      background-color: orange;
-      padding:0;
-      margin: 0;
-      }
-
-
-
     .tile:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
       border: 2px solid gold;
       }
@@ -61,31 +47,17 @@
 
     <div id="gameBoard">
       <script>
-        
+        var htmlElements = "";
         // Use for-loop to print out the first row of divs
-        for (var row = 1; row < 5; row++) {
-            var htmlElements = "";
-            for (var col = 1; col <= 5 - row; col++) {
-                htmlElements += " ";
-            
-            }
-
-            htmlElements = "*";
-            for (var col = 1; col < row; col++) {
-                htmlElements += " *";
-
-            }
-            console.log(htmlElements); 
-            // document.getElementById("gameBoard").innerHTML = htmlElements;
-
-          
+        for (var i = 1; i < 5; i++) {
+          htmlElements += `<div class="tile"></div>`
         }
-       
+        document.getElementById("gameBoard").innerHTML = htmlElements;
         /* Confirming that the program does print the HTML */
-        
+        console.log(htmlElements); 
 
-        /* One COMPONENT for longest row , Increasing.
-           One (or two) COMPONENT(s) for shorter rows, Decreasing.  */
+        /* One COMPONENT for longest row , Increasing. 4 -7 tiles.
+           One (or two) COMPONENT(s) for shorter rows, Decreasing. 6-4 tiles*/
 
 
 
