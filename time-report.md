@@ -6,7 +6,7 @@ Note: Timestamps are approximate and not exact
 
 ## Week 13 (Week 0 in terms of 10 week project-timeline)
 **Monday, 2025-03-24**
-  13.00-15.00: (Programming) Worked for a total of ca 2 hours.
+  - 13.00-15.00: (Programming) Worked for a total of ca 2 hours.
   - Created the basic prototype (1 button click = win the game).
   - Tried some variations with changing buttons, button types and changing button color. Trying out some CSS-based changes. Lots of time spent staring at code examples and trying to figure out what's what.
     
@@ -31,6 +31,11 @@ Became ill, and did not spend any major time on the Final Project. Created new P
 
 ## Week 15 (Week 2 in the Project Timeline)
 **Wednesday, 2025-04-09**
-(~1 hr? total). Still a bit sick, but continued researching and doing other smaller tasks: (Both) Uplaoded the main working files mentioned above. Did some more research into code structures and found some CSS to try out. Tried using loops to create a row of divs with mixed results.
+- (~1 hr? total). Still a bit sick, but continued researching and doing other smaller tasks: (Both) Uplaoded the main working files mentioned above. Did some more research into code structures and found some CSS to try out. Tried using loops to create a row of divs with mixed results.
+
 **Friday, 2025-04-11**
-- 10.00(??) - 13.30: (Webdev) Wrote basic HTML and CSS for the website. Mapped out rough placement of core features and visuals I want the page to have. 
+- 10.00(??) - 13.30: (Webdev) Wrote basic HTML and CSS for the website. Mapped out rough placement of core features and visuals I want the page to have.
+
+## Week 16 (Week 3 in the Project Timeline)
+**Tuesday, 2025-04-15**
+- (~2,5 hrs. Programming). Still trying to figure out how to generate the game board. Followed some online examples of generating a rhombus and then editing that code to try and make a hexagonal shape. Managed to get a more concrete way to structure the code (how I should think about it). Just have to actually make the steps work :]
