@@ -35,6 +35,20 @@
       padding:0;
       margin: 0;
       }
+
+      .tile2 {
+      display: inline-block;
+      height: 40px; /* adjust to control the size  */
+      aspect-ratio: cos(30deg);
+      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
+      border:1px solid red;
+      background-color: orange;
+      padding:0;
+      margin: 0;
+      }
+
+
+
     .tile:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
       border: 2px solid gold;
       }
@@ -47,30 +61,31 @@
 
     <div id="gameBoard">
       <script>
-        /* var htmlElements = "";
         
-          htmlElements += `<div class="tile"></div>`
-        }
-        document.getElementById("gameBoard").innerHTML = htmlElements;
-        /* Confirming that the program does print the HTML 
-        console.log(htmlElements);  */
-
-        function drawGameArea(n) {
-          for (var row = 1; row <=n; row++) {
-            var line ="";
-            for (var col =1; col <= n - row; col++) {
-              line += " ";
-
+        // Use for-loop to print out the first row of divs
+        for (var row = 1; row < 5; row++) {
+            var htmlElements = "";
+            for (var col = 1; col <= 5 - row; col++) {
+                htmlElements += " ";
+            
             }
 
-            line += `<div class="tile"></div>`
-            for (var col =1; col < row; col++) {
-              line += ` <div class="tile"></div>`;
+            htmlElements = "*";
+            for (var col = 1; col < row; col++) {
+                htmlElements += " *";
 
             }
-            console.log(line);
-          }
+            console.log(htmlElements); 
+            // document.getElementById("gameBoard").innerHTML = htmlElements;
+
+          
         }
+       
+        /* Confirming that the program does print the HTML */
+        
+
+        /* One COMPONENT for longest row , Increasing.
+           One (or two) COMPONENT(s) for shorter rows, Decreasing.  */
 
 
 
