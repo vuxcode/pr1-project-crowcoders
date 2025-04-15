@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programming Prototype</title>
+    <title>Lights Low</title>
 
     <style> /* Resetting browser styles */
       * {
@@ -12,7 +12,7 @@
       }
     </style>
 
-    <style> /* CSS for the game */
+    <style> /* CSS for the game assets */
       #gameBoard {
       text-align: center;
       }
@@ -24,6 +24,7 @@
 /*     .row {
       display: block;
       } */
+
     .tile {
       display: inline-block;
       height: 40px; /* adjust to control the size  */
@@ -48,7 +49,7 @@
       <script>
         var htmlElements = "";
         // Use for-loop to print out the first row of divs
-        for (var i = 1; i < 8; i++) {
+        for (var i = 1; i < 5; i++) {
           htmlElements += `<div class="tile"></div>`
         }
         document.getElementById("gameBoard").innerHTML = htmlElements;
