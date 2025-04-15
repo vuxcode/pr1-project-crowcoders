@@ -35,7 +35,7 @@
       padding:0;
       margin: 0;
       }
-    .tile:hover{ /* Hover is currently broken */
+    .tile:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
       border: 2px solid gold;
       }
     </style>
@@ -47,14 +47,33 @@
 
     <div id="gameBoard">
       <script>
-        var htmlElements = "";
-        // Use for-loop to print out the first row of divs
-        for (var i = 1; i < 5; i++) {
+        /* var htmlElements = "";
+        
           htmlElements += `<div class="tile"></div>`
         }
         document.getElementById("gameBoard").innerHTML = htmlElements;
-        /* Confirming that the program does print the HTML */
-        console.log(htmlElements); 
+        /* Confirming that the program does print the HTML 
+        console.log(htmlElements);  */
+
+        function drawGameArea(n) {
+          for (var row = 1; row <=n; row++) {
+            var line ="";
+            for (var col =1; col <= n - row; col++) {
+              line += " ";
+
+            }
+
+            line += `<div class="tile"></div>`
+            for (var col =1; col < row; col++) {
+              line += ` <div class="tile"></div>`;
+
+            }
+            console.log(line);
+          }
+        }
+
+
+
       </script>      
     </div>
  
