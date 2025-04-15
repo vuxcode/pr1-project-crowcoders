@@ -16,7 +16,7 @@
       #gameBoard {
       text-align: center;
       }
-    .intro {
+      .intro {
       text-align: center;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-style: italic;
@@ -34,10 +34,13 @@
       background-color: blue;
       padding:0;
       margin: 0;
+      line-height: 5px;
       }
     .tile:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
       border: 2px solid gold;
       }
+
+    
     </style>
   </head>
 
@@ -47,17 +50,43 @@
 
     <div id="gameBoard">
       <script>
+        
         var htmlElements = "";
-        // Use for-loop to print out the first row of divs
-        for (var i = 1; i < 5; i++) {
-          htmlElements += `<div class="tile"></div>`
+        // FIRST HALF
+        for (var row = 1; row < 4; row++) {
+         
+          for (var col = 1; col <= 3 + row; col++) {
+            htmlElements += `<div class="tile"></div>`;
+
+          }
+          htmlElements += `<br>`;
         }
+
+        // SECOND HALF
+
+        for (var row = 1; row < 5; row++) {
+
+         for (var col = 1; col <= 8 - row; col++) {
+           htmlElements += `<div class="tile"></div>`;
+
+         }
+         htmlElements += `<br>`;
+       }
+
         document.getElementById("gameBoard").innerHTML = htmlElements;
-        /* Confirming that the program does print the HTML */
+        /* Confirming that the program prints the HTML */
         console.log(htmlElements); 
 
         /* One COMPONENT for longest row , Increasing. 4 -7 tiles.
-           One (or two) COMPONENT(s) for shorter rows, Decreasing. 6-4 tiles*/
+           One (or two) COMPONENT(s) for shorter rows, Decreasing. 6-4 tiles
+           
+           Managed ??????????????????????????????????????
+
+           TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES IDK ;MAN
+           
+        */
+
+
 
 
 
