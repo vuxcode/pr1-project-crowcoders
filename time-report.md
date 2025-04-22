@@ -47,3 +47,4 @@ Became ill, and did not spend any major time on the Final Project. Created new P
 ## Week 17 (Week 4 in the Project Timeline)
 **Tuesday, 2025-04-122**
 - (~45 min. Programming). Added CSS classes for the tile-states, attempted functions for interactivity (unsuccessfully). Tried toubleshooting on my own with the help of the course site and Google (still unsuccessfully). Might also have to look over naming conventions.
+- (~30 min. Webdev). Tested out some dummy text, broke the main layout. Tried some quickfixes (relative position, margin). Did not fix it, will have to come back to it. Had fun with gradients instead. 
