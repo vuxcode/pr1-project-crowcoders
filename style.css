@@ -8,12 +8,12 @@
 }
 header {
     height: 100px;
-    background-image: linear-gradient(pink, darkgrey);
+    background-image: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 main {
     overflow: hidden;
-    background-image: linear-gradient(darkcyan,darkgrey);
+    background-image: linear-gradient(0deg,rgba(32, 67, 82, 1) 10%, rgba(31, 81, 105, 1) 29%, rgba(89, 140, 147, 1) 76%, rgba(132, 184, 178, 1) 100%);
 }
 
 /* Defining Main Page size */
@@ -33,8 +33,9 @@ nav {
 
 article { /* Game "container"*/
     float: left;
+    position: relative; /*HMMMMMM*/
     width: 750;
-    height: 600px;
+    /* height: 600px; */
     padding: 10px;
     background-color: bisque;
 }
@@ -64,18 +65,20 @@ menu li a:hover {
 #breadcrumbs {
     margin-top: 5px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .gameBoard {
-    float: left;
+    margin: 0 auto;
     width: 650px;
     height: 500px;
     padding: 20px;
     /* aspect-ratio: 700 / 600; */
-    background-color: darkcyan;
+    background-color: #586f6b;
 }
 
 footer {
+    overflow: hidden;
     background-color: antiquewhite;
     text-align: center;
 }
