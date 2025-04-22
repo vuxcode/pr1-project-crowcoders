@@ -15,29 +15,48 @@
     <style> /* CSS for the game assets */
       #gameBoard {
       text-align: center;
+      line-height: 0;
       }
+
       .intro {
       text-align: center;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-style: italic;
       }
-/*     .row {
+/*    .row {
       display: block;
       } */
 
-    .tile {
+      /* CSS for the color change */
+      .on {
       display: inline-block;
-      height: 40px; /* adjust to control the size  */
+      width: 50px;
+      height: 50px; /* adjust to control the size  
       aspect-ratio: cos(30deg);
-      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0);
-      border:1px solid black;
-      background-color: blue;
+      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
+      border:1px solid #ffc757;
+      background-color: #fca311;
       padding:0;
       margin: 0;
-      line-height: 5px;
+
       }
-    .tile:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
-      border: 2px solid gold;
+      
+
+      .tile, .off { /* Default tile */
+      display: inline-block;
+      width: 50px;
+      height: 50px; /* adjust to control the size  
+      aspect-ratio: cos(30deg);
+      clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
+      border:1px solid #001427;
+      background-color: #14213d;
+      padding:0;
+      margin: 0;
+      
+      }
+      .tile:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
+      border: 2px solid #e5e5e5;
+      
       }
 
     
@@ -52,6 +71,8 @@
       <script>
         
         var htmlElements = "";
+        /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
+
         // FIRST HALF
         for (var row = 1; row < 4; row++) {
          
@@ -62,8 +83,9 @@
           htmlElements += `<br>`;
         }
 
-        // SECOND HALF
+        /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
 
+        // SECOND HALF
         for (var row = 1; row < 5; row++) {
 
          for (var col = 1; col <= 8 - row; col++) {
@@ -77,18 +99,27 @@
         /* Confirming that the program prints the HTML */
         console.log(htmlElements); 
 
-        /* One COMPONENT for longest row , Increasing. 4 -7 tiles.
-           One (or two) COMPONENT(s) for shorter rows, Decreasing. 6-4 tiles
-           
-           Managed ??????????????????????????????????????
-
-           TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES IDK ;MAN
-           
+        /* Managed ??????????????????????????????????????
+        TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES
+        
         */
 
+        /* Attempt 1 at interactivity, changing states when clicking tiles */
+        /* var tileClick = document.getElementById("tile");
+        tile.addEventListener('click', function() {
+          console.log("You Clicked the Tile");
+        }) */
 
-
-
+        /* Attempt 2 */
+        $("#tile").click(changeClass);
+        function changeClass () {
+          if ($("#tile").hasClass("off")) {
+            $("#tile").removeClass("off").addClass("on");
+          }
+          else {
+            $("#tile").removeClass("off").addClass("off");
+          }
+        }
 
       </script>      
     </div>
