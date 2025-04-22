@@ -42,4 +42,8 @@ Became ill, and did not spend any major time on the Final Project. Created new P
 - (~1,5 hrs. Programming). Took me 84 years, but got the game board shape I wanted (hexagon). Other problems arose that I will look into at in the future, mainly spacing and aesthetics.
 
 **Wednesday, 2025-04-16**
-- (~15 min. Webdev). Added placeholder buttons and code for future logo & favicon. 
+- (~15 min. Webdev). Added placeholder buttons and code for future logo & favicon.
+  
+## Week 17 (Week 4 in the Project Timeline)
+**Tuesday, 2025-04-122**
+- (~45 min. Programming). Added CSS classes for the tile-states, attempted functions for interactivity (unsuccessfully). Tried toubleshooting on my own with the help of the course site and Google (still unsuccessfully). Might also have to look over naming conventions.
