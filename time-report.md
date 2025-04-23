@@ -40,11 +40,13 @@ Became ill, and did not spend any major time on the Final Project. Created new P
 **Tuesday, 2025-04-15**
 - (~2,5 hrs. Programming). Still trying to figure out how to generate the game board. Followed some online examples of generating a rhombus and then editing that code to try and make a hexagonal shape. Managed to get a more concrete way to structure the code (how I should think about it). Just have to actually make the steps work :]
 - (~1,5 hrs. Programming). Took me 84 years, but got the game board shape I wanted (hexagon). Other problems arose that I will look into at in the future, mainly spacing and aesthetics.
-
 **Wednesday, 2025-04-16**
 - (~15 min. Webdev). Added placeholder buttons and code for future logo & favicon.
   
 ## Week 17 (Week 4 in the Project Timeline)
-**Tuesday, 2025-04-122**
+**Tuesday, 2025-04-22**
 - (~45 min. Programming). Added CSS classes for the tile-states, attempted functions for interactivity (unsuccessfully). Tried toubleshooting on my own with the help of the course site and Google (still unsuccessfully). Might also have to look over naming conventions.
-- (~30 min. Webdev). Tested out some dummy text, broke the main layout. Tried some quickfixes (relative position, margin). Did not fix it, will have to come back to it. Had fun with gradients instead. 
+- (~30 min. Webdev). Tested out some dummy text, broke the main layout. Tried some quickfixes (relative position, margin). Did not fix it, will have to come back to it. Had fun with gradients instead.
+  
+**Wednesday, 2025-04-23**
+- (5 min. Webdev). Fixed the dummy text layout (it was a simple div-width issue but my brain wasn't braining yesterday).
