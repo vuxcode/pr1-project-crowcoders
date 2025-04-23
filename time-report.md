@@ -50,4 +50,4 @@ Became ill, and did not spend any major time on the Final Project. Created new P
   
 **Wednesday, 2025-04-23**
 - (5 min. Webdev). Fixed the dummy text layout (it was a simple div-width issue but my brain wasn't braining yesterday).
-- (10 min. Programming). Researched some code, realized I'm trying to use syntax (ex. $())from JS libraries and not "pure" JS. Explains why things don't work as expected.
+- (10 min. Programming). Researched some code, realized I'm trying to use syntax (ex. $())from JS libraries and not "pure" JS. Explains why things don't work as expected. (2 min later:) NVM it can also be used as a shortcut for a document function in JS. 
