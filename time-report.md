@@ -4,7 +4,7 @@
 
 Note: Timestamps are approximate and not exact
 
-## Week 13 (Week 0 in terms of 10 week project-timeline)
+## Week 13 (Week 0 in terms of 10 week Project Timeline)
 **Monday, 2025-03-24**
   - 13.00-15.00: (Programming) Worked for a total of ca 2 hours.
   - Created the basic prototype (1 button click = win the game).
@@ -24,10 +24,10 @@ Note: Timestamps are approximate and not exact
   - 10.00 - 13.00: (Both) Had another go at creating something basic with things I'm more confident in (CSS). Got a basic game board and CSS going.
   - 13.00 - 1400: (Both) Uploaded new commit to *index.html* with a basic template that I'll keep working with. (EDIT: I'll work on the Website and the Game in separate files and later on merge them into the main *index.html*).
   
-## Week 14 (Week 1 in terms of 10 week project-timeline)
-**Week summary, Monday - Friday, 31/3 - 4/4**
+## Week 14 (Week 1 in terms of 10 week Project Timeline)
+**Monday - Friday, 31/3 - 4/4**
 
-Became ill, and did not spend any major time on the Final Project. Created new Project Files (*We1-Website.html* & *Pr1-Program.html*), where I intend to code the website and the Game. I still attended lessons online and did code-along. 
+Week summary: Became ill, and did not spend any major time on the Final Project. Created new Project Files (*We1-Website.html* & *Pr1-Program.html*), where I intend to code the website and the Game. I still attended lessons online and did code-along. 
 
 ## Week 15 (Week 2 in the Project Timeline)
 **Wednesday, 2025-04-09**
@@ -50,7 +50,13 @@ Became ill, and did not spend any major time on the Final Project. Created new P
   
 **Wednesday, 2025-04-23**
 - (5 min. Webdev). Fixed the dummy text layout (it was a simple div-width issue but my brain wasn't braining yesterday).
-- (1 hr). Researched some code, realized I'm trying to use syntax (ex. $())from JS libraries and not "pure" JS. Explains why things don't work as expected. (2 min later:) NVM it can also be used as a shortcut for a document function in JS.
- Tried using the < button > element instead of < div id="tile" >, ended up with a cryptid. Tried modifying the function() that is intended to control interactivity as well, but didn't get very far with that since I need to have the elements sorted before I can   
- define the syntax for the function(). Experimented with some functions. Trying to untangle different syntaxes. (Managed to fix the cryptid)
+- (1 hr. Programming). Researched some code, realized I'm trying to use syntax (ex. $())from JS libraries and not "pure" JS. Explains why things don't work as expected. (2 min later:) NVM it can also be used as a shortcut for a document function in JS.
+ Tried using the < button > element instead of < div id= "tile" >, ended up with a cryptid. (Literary 10 min later: Managed to fix the cryptid). Also tried modifying the function() that is intended to control interactivity, but didn't get very far with that since 
+ I need to have the elements/names sorted before I can define the syntax for the function(). Experimented with some functions. Trying to untangle different syntaxes.
+
+## Week 17 (Week 5 in the Project Timeline)
+**Monday, 2025-04-28**
+
+ Attended workshop in school. Got some help untangling the functions-mess (adviced to use onclick). Also got some more information regarding some Properties (.classList) I was thinking of using to control the CSS. Showed the current website as well. 
+- (1,5 hrs? Programming). Fighting my demons aka for-loops. Got the iDs to print correctly. Due to unfortunate "´'-usage I first accidently printed the number IDs onto the buttons as well, but after some careful editing, I got the proper result. It is now possible to use the console to find individual tiles. Also added the 'onclick=""' - function to the printed string/buttons. Next step is to write the function to control the CSS.
 
