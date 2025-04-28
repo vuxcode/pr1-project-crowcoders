@@ -50,6 +50,7 @@
       background-color: #14213d;
       padding:0;
       margin: 0;
+      
       }
 
       button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
@@ -68,45 +69,45 @@
       <script>
         
         var htmlElements = "";
-        /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
+        var iD = "";
 
         // FIRST HALF
+        /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
         for (var row = 1; row < 4; row++) {
-         
+         // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
           for (var col = 1; col <= 3 + row; col++) {
-            htmlElements += `<button id='tile'></button>`;
+            htmlElements += `<button onclick="" id='tile`+ iD++ + `'>` + `</button>`;
+        // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
 
           }
           htmlElements += `<br>`;
         }
 
-        /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
 
         // SECOND HALF
+        /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
         for (var row = 1; row < 5; row++) {
 
          for (var col = 1; col <= 8 - row; col++) {
-           htmlElements += `<button id='tile'></button>`;
+           htmlElements += `<button onclick="" id='tile`+ iD++ + `'>` + `</button>`;
 
          }
          htmlElements += `<br>`;
        }
 
+       // Print out the above into the gameBoard
         document.getElementById("gameBoard").innerHTML = htmlElements;
         /* Confirming that the program prints the HTML */
         console.log(htmlElements);
 
-        /* Managed ??????????????????????????????????????
-        TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES */
+        /* TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES */
 
         var buttonTile = document.getElementById("tile");
 
-        buttonTile.addEventListener("click", changeClass)
+        
 
       /* TASK 2: Figure out the syntax/structure for this script.*/
-        function changeClass () {
-          tile.toggleClass("off");
-        };
+       
 
           
       
