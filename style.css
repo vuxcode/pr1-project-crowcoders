@@ -26,7 +26,7 @@ nav {
     float: left;
     width: 200px;
     height: 300px;
-    background-color: rgb(226, 198, 163);
+    background-image: url(images/MenuBG.png);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 10px;
 }
