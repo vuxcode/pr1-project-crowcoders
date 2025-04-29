@@ -23,7 +23,7 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
       font-style: italic;
       }
-/*    .row {
+  /* .row {
       display: block;
       } */
 
@@ -36,8 +36,7 @@
       clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
       border:1px solid #ffc757;
       background-color: #fca311;
-      padding:0;
-      margin: 0;
+      
       }
       
       button, .off { /* Default tile */
@@ -48,8 +47,7 @@
       clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
       border:1px solid #001427;
       background-color: #14213d;
-      padding:0;
-      margin: 0;
+      
       
       }
 
@@ -57,71 +55,62 @@
       border: 1px solid #e5e5e5;
       }
 
-    
+    /* TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES */
     </style>
   </head>
 
-<body>
-  <!-- Basic instructions placeholder -->
-    <p class="intro">Click the buttons below!</p>
+  <body> <!-- Generating Game assets -->
+    <!-- Basic instructions placeholder -->
+      <p class="intro">Click the buttons below!</p>
 
-    <div id="gameBoard">
-      <script>
-        
-        var htmlElements = "";
-        var iD = "";
+      <div id="gameBoard">
+        <script>
+          
+          var htmlElements = ""; // Variable used to print out the html
+          var iD = ""; // Variable to add unique IDs to the generated tiles
 
-        // FIRST HALF
-        /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
-        for (var row = 1; row < 4; row++) {
-         // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
-          for (var col = 1; col <= 3 + row; col++) {
-            htmlElements += `<button onclick="" id='tile`+ iD++ + `'>` + `</button>`;
-        // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
-
+          // FIRST HALF. Note: row = rader, col ~tiles
+          /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
+          for (var row = 1; row < 4; row++) {
+          // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
+            for (var col = 1; col <= 3 + row; col++) {
+              htmlElements += `<button onclick="changeClass()" id='tile`+ iD++ + `'>` + `</button>`;
+          // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
+            }
+            htmlElements += `<br>`;
           }
-          htmlElements += `<br>`;
+
+          // SECOND HALF. Note: row = rader, col ~tiles
+          /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
+          for (var row = 1; row < 5; row++) {
+            for (var col = 1; col <= 8 - row; col++) {
+              htmlElements += `<button onclick="changeClass()" id='tile`+ iD++ + `'>` + `</button>`;
+            }
+            htmlElements += `<br>`;
+        }
+
+        // Print out the above into the gameBoard
+          document.getElementById("gameBoard").innerHTML = htmlElements;
+          /* Confirming that the program prints the HTML */
+          console.log(htmlElements);
+        </script>      
+      </div>
+  
+      <script> // Interactivity
+        var gameTile = document.getElementById("tile" + iD);
+        
+        function changeClass() {
+          if (gameTile) {
+            gameTile.classList.remove(".on");
+            gameTile.classList.add(".off");
+          } else {
+            gameTile.classList.add(".off");
+            gameTile.classList.remove(".on");
+          }
+
         }
 
 
-        // SECOND HALF
-        /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
-        for (var row = 1; row < 5; row++) {
+      </script>
 
-         for (var col = 1; col <= 8 - row; col++) {
-           htmlElements += `<button onclick="" id='tile`+ iD++ + `'>` + `</button>`;
-
-         }
-         htmlElements += `<br>`;
-       }
-
-       // Print out the above into the gameBoard
-        document.getElementById("gameBoard").innerHTML = htmlElements;
-        /* Confirming that the program prints the HTML */
-        console.log(htmlElements);
-
-        /* TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES */
-
-        var buttonTile = document.getElementById("tile");
-
-        
-
-      /* TASK 2: Figure out the syntax/structure for this script.*/
-       
-
-          
-      
-
-
-
-
-
-      </script>      
-    </div>
- 
- <script>
-/*JS goes here*/
-
-</script>
-
-</body>
+  </body>
