@@ -63,4 +63,5 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 **Tuesday, 2025-04-29**
 - (45min. Programming). Attempting to get the interactivity to work. So far I'm getting Uncaught Reference errors in the console. So I'll suppose I'll keep trying to catch those references. (It seems like the buttons are clickable as I'm getting messages in the console. Those messages may be Uncaught reference errors, but I'll take it. Tried calling different attributes (button, tile, gameTile) before the .classList but no success so far. I might also be using the syntax incorrectly smh.
 - (30 min. Webdev). Made a custom background image and added it to the nav element, just to experiment and see if it worked (it did). Image is a bit weirdly cropped because I made the image the size of the Whole nav element instead of the area under the menu, but this was just a test, so that's fine. Did this test as I most likely will create custom visual assets for various parts of the website.
+- (5 min. Webdev). Imported an external Google Font to the website.
 
