@@ -60,3 +60,6 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
  Attended workshop in school. Got some help untangling the functions-mess (adviced to use onclick). Also got some more information regarding some Properties (.classList) I was thinking of using to control the CSS. Showed the current website as well. 
 - (1,5 hrs? Programming). Fighting my demons aka for-loops. Got the iDs to print correctly. Due to unfortunate "´'-usage I first accidently printed the number IDs onto the buttons as well, but after some careful editing, I got the proper result. It is now possible to use the console to find individual tiles. Also added the 'onclick=""' - function to the printed string/buttons. Next step is to write the function to control the CSS.
 
+**Tuesday, 2025-04-29**
+- (45min. Programming). Attempting to get the interactivity to work. So far I'm getting Uncaught Reference errors in the console. So I'll suppose I'll keep trying to catch those references. (It seems like the buttons are clickable as I'm getting messages in the console. Those messages may be Uncaught reference errors, but I'll take it. Tried calling different attributes (button, tile, gameTile) before the .classList but no success so far. I might also be using the syntax incorrectly smh.
+
