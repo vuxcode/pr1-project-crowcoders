@@ -67,4 +67,5 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 
 **Wednesday, 2025-04-30**
 - (30 min. Programming). More research into, and trying out classList(s). Attempted a hover effect, but did not succeed. Still doing something wrong (my guess is using wrong syntax, or calling the wrong elements). Troubleshooting using DevTools, trying to keep it simple.
+- (30 min. Programming). Testing more properties (classList.contains). Idk if success? DevTools show css being strike-.through'd (but no red error messages). curious. Will test separating the CSS classes completely.
 
