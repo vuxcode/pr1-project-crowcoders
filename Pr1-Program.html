@@ -97,15 +97,15 @@
       </div>
   
       <script> // Interactivity
-        var gameTile = document.getElementById("tile" + iD);
+        var tile = document.getElementById("tile" + iD);
         
         function changeClass() {
-          if (gameTile) {
-            gameTile.classList.remove(".on");
-            gameTile.classList.add(".off");
+          if (tile) {
+            tile.classList.remove(".on");
+            tile.classList.add(".off");
           } else {
-            gameTile.classList.add(".off");
-            gameTile.classList.remove(".on");
+            tile.classList.add(".on");
+            tile.classList.remove(".off");
           }
 
         }
