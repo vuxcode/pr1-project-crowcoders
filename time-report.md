@@ -65,3 +65,6 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 - (30 min. Webdev). Made a custom background image and added it to the nav element, just to experiment and see if it worked (it did). Image is a bit weirdly cropped because I made the image the size of the Whole nav element instead of the area under the menu, but this was just a test, so that's fine. Did this test as I most likely will create custom visual assets for various parts of the website.
 - (5 min. Webdev). Imported an external Google Font to the website.
 
+**Wednesday, 2025-04-30**
+- (30 min. Programming). More research into, and trying out classList(s). Attempted a hover effect, but did not succeed. Still doing something wrong (my guess is using wrong syntax, or calling the wrong elements). Troubleshooting using DevTools, trying to keep it simple.
+
