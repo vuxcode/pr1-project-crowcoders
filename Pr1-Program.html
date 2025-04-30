@@ -47,13 +47,16 @@
       clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
       border:1px solid #001427;
       background-color: #14213d;
-      
-      
       }
 
-      button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
-      border: 1px solid #e5e5e5;
+      .hover {
+        background-color: #fca311;
+        
       }
+
+/*       button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape
+      border: 1px solid #e5e5e5;
+      } */
 
     /* TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES */
     </style>
@@ -74,7 +77,7 @@
           for (var row = 1; row < 4; row++) {
           // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
             for (var col = 1; col <= 3 + row; col++) {
-              htmlElements += `<button onclick="changeClass()" id='tile`+ iD++ + `'>` + `</button>`;
+              htmlElements += `<button onclick="test()" id='tile`+ iD++ + `'>` + `</button>`;
           // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
             }
             htmlElements += `<br>`;
@@ -84,7 +87,7 @@
           /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
           for (var row = 1; row < 5; row++) {
             for (var col = 1; col <= 8 - row; col++) {
-              htmlElements += `<button onclick="changeClass()" id='tile`+ iD++ + `'>` + `</button>`;
+              htmlElements += `<button onclick="test()" id='tile`+ iD++ + `'>` + `</button>`;
             }
             htmlElements += `<br>`;
         }
@@ -98,19 +101,21 @@
   
       <script> // Interactivity
         var tile = document.getElementById("tile" + iD);
+
+        function test() {
+        tile.addEventListener("mouseover", event => {
+          event.target.classList.add("hover");
+
+        });
+
+        tile.addEventListener("mouseout", event => {
+          event.target.classList.remove("hover");
+
+        });
+      }
+
+
         
-        function changeClass() {
-          if (tile) {
-            tile.classList.remove(".on");
-            tile.classList.add(".off");
-          } else {
-            tile.classList.add(".on");
-            tile.classList.remove(".off");
-          }
-
-        }
-
-
       </script>
 
   </body>
