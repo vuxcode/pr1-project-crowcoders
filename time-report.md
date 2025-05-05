@@ -69,3 +69,8 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 - (30 min. Programming). More research into, and trying out classList(s). Attempted a hover effect, but did not succeed. Still doing something wrong (my guess is using wrong syntax, or calling the wrong elements). Troubleshooting using DevTools, trying to keep it simple.
 - (30 min. Programming). Testing more properties (classList.contains). Idk if success? DevTools show css being strike-.through'd (but no red error messages). curious. Will test separating the CSS classes completely.
 
+## Week 18 (Week 6 in the Project Timeline)
+**Monday, 2025-05-05**
+
+Attended workshop in school. Got help with fixing some syntax issues (using ${ } when printing the html in the for-loop to parse everything correctly). Sorted out the changeClass() syntax as well so the colors change on click (or well, double-click, currently).
+
