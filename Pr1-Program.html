@@ -67,7 +67,7 @@
         <script>
           
           var htmlElements = ""; // Variable used to print out the html
-          var iD = ""; // Variable to add unique IDs to the generated tiles
+          var iD = 1; // Variable to add unique IDs to the generated tiles. Starting at 1.
 
           // FIRST HALF. Note: row = rader, col ~tiles
           /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
@@ -99,10 +99,10 @@
       <script> // Interactivity
         function changeClass(input) {
           console.log(input)
-          var tile = document.getElementById("tile" + input); //
-          if (tile.classList.contains('.off')) {
-            tile.classList.remove(".off");
-            tile.classList.add(".on");
+          var tile = document.getElementById("tile" + input);
+          if (tile.classList.contains('off')) {
+            tile.classList.remove("off");
+            tile.classList.add("on");
           } else {
             tile.classList.contains('on')
             tile.classList.remove("on");
