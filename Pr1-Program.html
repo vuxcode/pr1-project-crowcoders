@@ -74,7 +74,7 @@
           for (var row = 1; row < 4; row++) {
           // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
             for (var col = 1; col <= 3 + row; col++) {
-              htmlElements += `<button onclick="changeClass()" id='tile`+ iD++ + `'>` + `</button>`;
+              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
           // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
             }
             htmlElements += `<br>`;
@@ -84,7 +84,7 @@
           /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
           for (var row = 1; row < 5; row++) {
             for (var col = 1; col <= 8 - row; col++) {
-              htmlElements += `<button onclick="changeClass()" id='tile`+ iD++ + `'>` + `</button>`;
+              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`;
             }
             htmlElements += `<br>`;
         }
@@ -97,15 +97,16 @@
       </div>
   
       <script> // Interactivity
-        var tile = document.getElementById("tile18"); // Example tile. 
-        
-        function changeClass() {
+        function changeClass(input) {
+          console.log(input)
+          var tile = document.getElementById("tile" + input); //
           if (tile.classList.contains('.off')) {
             tile.classList.remove(".off");
             tile.classList.add(".on");
           } else {
-            tile.classList.add(".on");
-            tile.classList.remove(".off");
+            tile.classList.contains('on')
+            tile.classList.remove("on");
+            tile.classList.add("off");
           }
 
         }
