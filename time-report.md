@@ -72,5 +72,8 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 ## Week 18 (Week 6 in the Project Timeline)
 **Monday, 2025-05-05**
 
-Attended workshop in school. Got help with fixing some syntax issues (using ${ } when printing the html in the for-loop to parse everything correctly). Sorted out the changeClass() syntax as well so the colors change on click (or well, double-click, currently).
+Attended workshop in school. Got help with fixing some syntax issues (using ${ } when printing the html in the for-loop to parse everything correctly. Changing the CSS classes was not necessary). Sorted out the changeClass() syntax as well so the colors change on click (or well, double-click, currently).
+
+**Tuesday, 2025-05-06**
+(30 min. Programming). Fixed the double-click (changed the order of the on/off). Also testing out functions for generating a random game board ("onload" in the body, adding another button to let the user manually randomize as well. These features are WIP. Also pondering how to achieve the "multiple buttons changing when 1 button is clicked"-feature, as well as how to define a winning state (all tiles are either x or y = win).
 
