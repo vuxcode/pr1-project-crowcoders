@@ -27,6 +27,12 @@
       display: block;
       } */
 
+      #Randomize {  /* CSS for randomize button */
+        width: 100px;
+        height: 25px;
+        background-color: bisque;
+      }
+
       /* CSS for the color change */
       button, .on {
       display: inline-block;
@@ -59,7 +65,7 @@
     </style>
   </head>
 
-  <body> <!-- Generating Game assets NOTE: use onload=function() to have the tiles generate when page is loaded-->
+  <body onload="randomizeTiles()"> <!-- Generating Game assets NOTE: use onload=function() to have the tiles generate when page is loaded-->
     <!-- Basic instructions placeholder -->
       <p class="intro">Click the buttons below!</p>
 
@@ -99,27 +105,25 @@
       <button id="Randomize" onclick="randomizeTiles()">Randomize</button> <!-- Creating a control for the user to manually randomize a board. Currentyl broken/not connected. -->
 
       <script> // Generating starting board
-        function randomizeTiles() {
+        function randomizeTiles(input) {
+          // console.log(input);  "Cannot read property of null, reading classList"
           for(var i=0; i < row*col; i++)
-            click(Math.floor(Math.random()*row*col)); // "Click not defined"
+            changeClass(Math.floor(Math.random()*row*col)); // "Click not defined"
       }
       </script>
 
       <script> // Interactivity, on click
         function changeClass(input) {
-          console.log(input)
+          console.log(input);
           var tile = document.getElementById("tile" + input);
           if (tile.classList.contains("on")) {
               tile.classList.remove("on");
               tile.classList.add("off");
           } else {
-              
               tile.classList.remove("off");
               tile.classList.add("on");
           }
         }
-
-
       </script>
 
   </body>
