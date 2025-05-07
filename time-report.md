@@ -81,4 +81,9 @@ Attended workshop in school. Got help with fixing some syntax issues (using ${ }
 Note: Have not uploaded the separate pages to gitHub yet.
 
 **Tuesday, 2025-05-07**
-- (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is hwo to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :).
+- (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is how to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :).
+  
+Attended workshop in school. Received help with connecting the code more to an "actual program" as opposed to just having everything be "displayed on-screen". Stored the different rows of game tiles in arrays. Storing the data should help me define what tiles change when clicked as well as defining winning states. Also changed the tile shape from squares to circles because circles are nice and (imo) looks a bit more polished, and it gives less of the "standard Blender cube" - vibe.
+
+- (1hr. Webdev). Trying to connect the pages as well as adding a favicon. Currently things are not connecting as they should but the assets are there at least. The additional pages can link back to the We1-Website.html just fine, but the Website can't find the files in /pages. I've tried ./../ but since I'm not looking Outside of the Main Directory (I'm trying to reach the Inside the /pages folder), that didn't work. Works fine for connecting the /pages with the CSS sheet and main site.
+
