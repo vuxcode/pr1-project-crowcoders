@@ -58,6 +58,7 @@
 
       button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
       border: 1px solid #e5e5e5;
+      
       }
       
 
@@ -102,7 +103,7 @@
         </script>      
       </div>
 
-      <button id="Randomize" onclick="randomizeTiles()">Randomize</button> <!-- Creating a control for the user to manually randomize a board. Currentyl broken/not connected. -->
+      <button id="Randomize" onclick="randomizeTiles()">Randomize</button> <!-- Creating a control for the user to manually randomize a board. -->
 
       <script> // Generating starting board
         function randomizeTiles(input) {
@@ -116,6 +117,7 @@
         function changeClass(input) {
           console.log(input);
           var tile = document.getElementById("tile" + input);
+          //  Add variables for other tiles??
           if (tile.classList.contains("on")) {
               tile.classList.remove("on");
               tile.classList.add("off");
@@ -124,6 +126,11 @@
               tile.classList.add("on");
           }
         }
+      </script>
+
+      <script> // Check game state (win)
+      // When all tiles are either ON or OFF, display win message (alert?)
+
       </script>
 
   </body>
