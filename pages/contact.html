@@ -4,9 +4,9 @@
   <head>
     <meta charset="UTF-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
 	
-	  <title>Website</title>
+	  <title>Contact</title>
     <!-- Tab icon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
@@ -29,7 +29,7 @@
         <!-- Navigation menu -->
         <nav> <!--"Left column"-->
           <menu>
-            <li><a href="#Home">Home</a></li>
+            <li><a href="../We1-Website.html">Home</a></li>
             <li><a href="/pages/about.html">About</a></li>
             <li><a href="/pages/contact.html">Contact</a></li>
           </menu>
@@ -37,22 +37,41 @@
         
         <!-- Main column. Program/Game area -->
         <article> 
-          <div class="miniNav"><a href="#">Home</a>  » Game </div>
+          <div class="miniNav"><a href="#">Home</a>  » Contact </div>
           <div id="breadcrumbs">
             <p>Dummy text</p>
           </div>
-          <div class="gameBoard">
-          <!---CODE FOR GAME GOES HERE-->
-            <p>Pretend there's a game here</p>
-            <button>Reset</button>
-            <button>Placeholder2</button>
-          </div>
+          
 
           <p id="breadcrumbs">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus ut nulla soluta. Ipsam quae maiores, molestias quia harum eveniet facere provident voluptatem veritatis! Quasi repudiandae expedita fugiat iste aut aspernatur? <br><br>
           Doloribus velit provident ex illum eum! Cum sequi doloremque ipsa ullam perferendis accusantium laboriosam obcaecati facere quaerat? Repudiandae incidunt necessitatibus temporibus rerum non quas commodi enim, soluta modi ratione quasi! <br><br>
           Doloremque repellat dolor aspernatur. Ipsa, eveniet? Labore aperiam doloremque rerum ipsum, quis pariatur saepe rem porro totam, dignissimos iusto veniam quasi accusantium quibusdam numquam, voluptas expedita molestias ipsam perferendis cupiditate. <br><br>
           Aliquam eaque sed, magni ducimus voluptatum totam natus sint alias officiis? Itaque, necessitatibus iste voluptatum, vero accusantium nemo veritatis, nesciunt deleniti harum eius facilis et similique natus reiciendis quidem rerum! <br><br>
           Doloribus ducimus est magni fugit aspernatur, eius sit libero voluptate, eligendi placeat, aut omnis officiis blanditiis nesciunt porro obcaecati itaque assumenda quibusdam. Nam eum similique, ea eveniet blanditiis quaerat porro?</p>
+
+          <div class="form">
+            <!-- Create form element -->
+            <form action="" method="POST">
+            <!-- Put form controls here -->
+              <fieldset>
+                <legend>Contact Me</legend>
+          
+                <!--The Label Element -->
+                <label for="name">Your name:</label>
+                <input id="name" type="name">
+      
+                <label for="email">Your email:</label>
+                <input id="email" type="email">
+      
+                <!-- Textarea Element-->
+                <label for="message">Enter your message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+              </fieldset>
+              <!-- Add the submit button AFTER the fieldset -->
+                <input class="sendButton" type="submit" value="Send">
+              <!-- End of the form -->
+            </form>
+        </div>
         </article>
 
 

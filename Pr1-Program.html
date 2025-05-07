@@ -53,46 +53,59 @@
       clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
       border:1px solid #001427;
       background-color: #14213d;
+      border-radius: 50px; /* Circle shape */
       
       }
 
       button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
       border: 1px solid #e5e5e5;
-      
+    
       }
       
+      /* TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES. Offset? Make the spaces bigger, make it look intentional ? */
 
-    /* TASK: DEAL W/ TILE SHAPE AND THE SPACE BETWEEN TILES. Offset? Make the spaces bigger, make it look intentional ? */
     </style>
   </head>
 
   <body onload="randomizeTiles()"> <!-- Generating Game assets NOTE: use onload=function() to have the tiles generate when page is loaded-->
-    <!-- Basic instructions placeholder -->
-      <p class="intro">Click the buttons below!</p>
+  
+      <p class="intro">Click the buttons below!</p>  <!-- Basic instructions placeholder -->
 
       <div id="gameBoard">
         <script>
           
+          var gameArea = [];
           var htmlElements = ""; // Variable used to print out the html
           var iD = 1; // Variable to add unique IDs to the generated tiles. Starting at 1.
 
           // FIRST HALF. Note: row = rader, col ~tiles
           /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
           for (var row = 1; row < 4; row++) {
+            // COLIN: START A NEW ROW ARRAY HERE
+            var arrayFirstHalf = [];
           // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
             for (var col = 1; col <= 3 + row; col++) {
+              // COLIN: ADD THE CURRENT ID NUMBER TO THE CURRENT ROW ARRAY HERE
+              arrayFirstHalf.push(iD);
               htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
           // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
             }
+          // COLIN: WHEN THE LOOP IS FINISHED FOR THE CURRENT ROW THEN ADD THE ROW ARRAY TO THE GAME AREA ARRAY
+            gameArea.push(arrayFirstHalf);
+
             htmlElements += `<br>`;
           }
 
           // SECOND HALF. Note: row = rader, col ~tiles
           /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
           for (var row = 1; row < 5; row++) {
+            var arraySecondHalf = [];
             for (var col = 1; col <= 8 - row; col++) {
+              arraySecondHalf.push(iD);
               htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`;
             }
+            gameArea.push(arraySecondHalf);
+
             htmlElements += `<br>`;
         }
 
@@ -107,7 +120,7 @@
 
       <script> // Generating starting board
         function randomizeTiles(input) {
-          // console.log(input);  "Cannot read property of null, reading classList"
+           console.log();  // "Cannot read property of null, reading classList"
           for(var i=0; i < row*col; i++)
             changeClass(Math.floor(Math.random()*row*col)); // "Click not defined"
       }
@@ -130,6 +143,7 @@
 
       <script> // Check game state (win)
       // When all tiles are either ON or OFF, display win message (alert?)
+      // Do I need to define x color/class to be true/false?
 
       </script>
 

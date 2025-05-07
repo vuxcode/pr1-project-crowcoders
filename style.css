@@ -62,6 +62,10 @@ menu li a:hover {
     border-radius: 5px;;
 }
 
+menu li a:active {
+    box-shadow: 2px 2px 5px #fc894d;
+}
+
 #breadcrumbs {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -114,5 +118,5 @@ legend {
 
   .sendButton {
     margin-left: 18px;
-    color: steelblue
+    color: steelblue;
   }
