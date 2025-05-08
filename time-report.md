@@ -40,6 +40,7 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 **Tuesday, 2025-04-15**
 - (~2,5 hrs. Programming). Still trying to figure out how to generate the game board. Followed some online examples of generating a rhombus and then editing that code to try and make a hexagonal shape. Managed to get a more concrete way to structure the code (how I should think about it). Just have to actually make the steps work :]
 - (~1,5 hrs. Programming). Took me 84 years, but got the game board shape I wanted (hexagon). Other problems arose that I will look into at in the future, mainly spacing and aesthetics.
+
 **Wednesday, 2025-04-16**
 - (~15 min. Webdev). Added placeholder buttons and code for future logo & favicon.
   
@@ -83,7 +84,7 @@ Note: Have not uploaded the separate pages to gitHub yet.
 **Wednesday, 2025-05-07**
 - (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is how to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :).
   
-Attended workshop in school. Received help with connecting the code more to an "actual program" as opposed to just having everything be "displayed on-screen". Stored the different rows of game tiles in arrays. Storing the data should help me define what tiles change when clicked as well as defining winning states. Also changed the tile shape from squares to circles because circles are nice and (imo) looks a bit more polished, and it gives less of the "standard Blender cube" - vibe.
+Attended workshop in school. Received help with connecting the code more to an "actual program" as opposed to just having everything be "displayed on-screen". Stored the different rows of game tiles in arrays. Storing the data should help me define what tiles change when clicked as well as defining winning states. Also changed the tile shape from squares to circles because circles are nice and (imo) looks a bit more polished, and it gives less of the "default Blender cube" - vibe.
 
 - (1hr. Webdev). Trying to connect the pages as well as adding a favicon. Currently things are not connecting as they should but the assets are there at least. The additional pages can link back to the We1-Website.html just fine, but the Website can't find the files in /pages. I've tried ./../ but since I'm not looking Outside of the Main Directory (I'm trying to reach the Inside the /pages folder), that didn't work. Works fine for connecting the /pages with the CSS sheet and main site. (NOTE: Why is it going into my C-drive. Stop that.)
 - (10 min. Webdev). Directory issues. Suddenly using ./../ seemes to work. Sometimes the adressbar will show that the /pages has been duplicated, so I'll have to solve that next. But now the pages link to each other, even if it is RNG-based).
@@ -91,3 +92,5 @@ Attended workshop in school. Received help with connecting the code more to an "
 **Thursday, 2025-05-07**
 - (45min? Programming). Trying to untangle my code and creating the groundwork for expanding on the changing of CSS, but I've somehow forgotten why am I'm using things (such as input). Confused about numbers in the console, I thought they made sense but now they don't? When tiles are randomized, they don't correlate to either the tileID or the array index(?).
 - (5 min. Webdev). Fixed the directory issue witht the pages. The directory issue was using /pages when it wasn't needed as the about/contact page are in the same diretory.
+  
+Attended workshop in school. Did some mock-code on my own, trying to break down the process into steps. Got help testing the array I made, and it's working as inteded (using .length & .indexof). Created a var that holds the user-clicked tile so it can be acess and confirmed in the console (clickedTile). Next step is to create a var (input) that holds the clicked tile and *vague hand gestures* loop through the array.
