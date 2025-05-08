@@ -131,6 +131,13 @@
           console.log(input);
           var tile = document.getElementById("tile" + input);
           //  Add variables for other tiles??
+          //  Find which tile is being clicked, store in new var
+          //  take that var and +1 -1 etc.
+          //  in if/else below, replace tile with the var created above?
+
+          // Need another if/else statement(?) for the edge tiles to prevent overlap
+
+
           if (tile.classList.contains("on")) {
               tile.classList.remove("on");
               tile.classList.add("off");
@@ -143,7 +150,7 @@
 
       <script> // Check game state (win)
       // When all tiles are either ON or OFF, display win message (alert?)
-      // Do I need to define x color/class to be true/false?
+      // Need to define when all tiles .contains... win?
 
       </script>
 
