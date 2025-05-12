@@ -94,3 +94,11 @@ Attended workshop in school. Received help with connecting the code more to an "
 - (5 min. Webdev). Fixed the directory issue witht the pages. The directory issue was using /pages when it wasn't needed as the about/contact page are in the same diretory.
   
 Attended workshop in school. Did some mock-code on my own, trying to break down the process into steps. Got help testing the array I made, and it's working as inteded (using .length & .indexof). Created a var that holds the user-clicked tile so it can be acess and confirmed in the console (clickedTile). Next step is to create a var (input) that holds the clicked tile and *vague hand gestures* loop through the array.
+
+**Friday, 2025-05-08**
+- (1,5 hrs. Programming). Tried various combinations of array/for-loops, did not really succeed, but at least I tried.
+
+## Week 19 (Week 7 in the Project Timeline)
+**Monday, 2025-05-12**
+
+- (1hr. Programming). Did not attend todays workshop due to potential fire drill (and also wanting to attempt solving the for-loop/array-issue myself. Tried some more combinations of arrays & loops and added if/else statements to the mix. Managed to get the array index to show in the console.
