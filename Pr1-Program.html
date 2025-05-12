@@ -140,8 +140,14 @@
           var tile = document.getElementById("tile" + input);
           
           for (var counter = 0; counter < gameArea.length; counter++) {
-            for (var counter2 = 0; counter2 < gameArea[counter]; counter2++) {
-              console.log(gameArea.indexOf(clickedTile));
+             if (gameArea[counter].indexOf(clickedTile) > -1) {
+                console.log("hello");
+
+              } else {
+            
+             
+              console.log("Hello2");
+          
             }
           }
 
