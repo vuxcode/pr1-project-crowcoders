@@ -102,3 +102,4 @@ Attended workshop in school. Did some mock-code on my own, trying to break down 
 **Monday, 2025-05-12**
 
 - (1hr. Programming). Did not attend todays workshop due to potential fire drill (and also wanting to attempt solving the for-loop/array-issue myself. Tried some more combinations of arrays & loops and added if/else statements to the mix. Managed to get the array index to show in the console.
+- (1,5hrs. Webdev). Edited/created and added visual assets such as banner, background image and favicon. Played around a bit with divs and spacing to make the design feel a bit more polished.
