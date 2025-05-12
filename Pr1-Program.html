@@ -120,8 +120,7 @@
       <button id="Randomize" onclick="randomizeTiles()">Randomize</button> <!-- Creating a control for the user to manually randomize a board. -->
 
       <script> // Generating starting board
-        function randomizeTiles(input) {
-          // console.log(input);   "Cannot read property of null, reading classList"
+        function randomizeTiles() {
           for(var i=0; i < row*col; i++)
             changeClass(Math.floor(Math.random()*row*col)); // Randomly getting errors in console. Might need to define min-max nr? Tho I feel like row*col should do that already?
       }
@@ -129,16 +128,25 @@
 
       <script> // Interactivity, on click
         // Declare var 
-        var clickedTile = "";
+        var clickedTile = 0;
+        var counter = 0; // ??
+        var counter2 = 0; // ??
 
         function changeClass(input) {
           console.log(input);
-          // Update var to store the tile user clicked
+
+          // Update var to store user input
           clickedTile = input;
           var tile = document.getElementById("tile" + input);
-          var adjecentTilesArray = "gameArea[]???";
+          
+          for (var counter = 0; counter < gameArea.length; counter++) {
+            for (var counter2 = 0; counter2 < gameArea[counter]; counter2++) {
+              console.log(gameArea.indexOf(clickedTile));
+            }
+          }
+
           //  Add variables for other tiles??
-          //  Find which tile is being clicked, store in new var
+          //  Find which tile is being clicked, store in new var (Did I not already do that with the clickedTile = input? i am confusion.)
           //  take that var and +1 -1 etc.
           //  in if/else below, replace tile with the var created above? 
 
