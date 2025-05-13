@@ -82,7 +82,7 @@ Attended workshop in school. Got help with fixing some syntax issues (using ${ }
 Note: Have not uploaded the separate pages to gitHub yet.
 
 **Wednesday, 2025-05-07**
-- (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is how to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :).
+- (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is how to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :). (EDIT 13/5: Changed the tile shape from squares/hexagons to circles. The design is still very basic, but circles are shaped like freinds and I fel thtey fit better together compared to the squares. Not sure if I'll have time to tinker more with the intended hexagonal shape before the project deadline).
   
 Attended workshop in school. Received help with connecting the code more to an "actual program" as opposed to just having everything be "displayed on-screen". Stored the different rows of game tiles in arrays. Storing the data should help me define what tiles change when clicked as well as defining winning states. Also changed the tile shape from squares to circles because circles are nice and (imo) looks a bit more polished, and it gives less of the "default Blender cube" - vibe.
 
@@ -103,3 +103,18 @@ Attended workshop in school. Did some mock-code on my own, trying to break down 
 
 - (1hr. Programming). Did not attend todays workshop due to potential fire drill (and also wanting to attempt solving the for-loop/array-issue myself. Tried some more combinations of arrays & loops and added if/else statements to the mix. Managed to get the array index to show in the console.
 - (1,5hrs. Webdev). Edited/created and added visual assets such as banner, background image and favicon. Played around a bit with divs and spacing to make the design feel a bit more polished.
+
+**Tuesday, 2025-05-13**
+- (1 hr. Both). Doing a bit of an overview regarding where the project is, since next week is presentation week. Made a small checklist of the vital things that are left to do:
+  
+  » (Hopefully) Figure out the game interactivity during the remaining workshops.
+ 
+  For the website:
+  
+  » Refining the text on the website
+  
+  » Connect the form backend code on the contact-page.
+  
+  For both:
+  
+  » It's file merging (adding the game & website code into index.html), code validaiton and writing down a project summary and user instructions.
