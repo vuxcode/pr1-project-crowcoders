@@ -105,16 +105,16 @@ Attended workshop in school. Did some mock-code on my own, trying to break down 
 - (1,5hrs. Webdev). Edited/created and added visual assets such as banner, background image and favicon. Played around a bit with divs and spacing to make the design feel a bit more polished.
 
 **Tuesday, 2025-05-13**
-- (1 hr. Both). Doing a bit of an overview regarding where the project is, since next week is presentation week. Made a small checklist of the vital things that are left to do:
+- (1 hr. Both). Doing a bit of an overview regarding where the project is, since next week is presentation week. <br> Made a small checklist of the vital things that are left to do:
   
-  » (Hopefully) Figure out the game interactivity during the remaining workshops.
- 
-  For the website:
-  
-  » Refining the text on the website
-  
-  » Connect the form backend code on the contact-page.
-  
-  For both:
-  
-  » It's file merging (adding the game & website code into index.html), code validaiton and writing down a project summary and user instructions.
+  » (Hopefully) Figure out the game interactivity during the remaining workshops.<br><br>
+  For the website:<br>
+  » Refining the text on the website<br>
+  » Logo <br>
+  » Connect the form backend code on the contact-page.<br><br>
+  For both: <br>
+  » It's file merging (adding the game & website code into index.html) <br>
+  » Code validaiton <br>
+  » and writing down a project summary and user instructions.
+
+  - (1,5-2 hrs. Webdev). Tinkered further with the website design. Playing around with padding & margin, (almost went insane because at one point I missed to define unit of measurement for the margin & it took me a while to notice that was why my page was attempting to enter orbit). <br> Added some effects (box-shadow) to the menu buttons (hover/activated) and played around with rounded corners (border-radius). Re-structured a bit of the HTML for easier control, (added a div for the content text rather than having a p element). Drafted some quick text for the main & contact page to replace eventually replace the lorem ipsum. Replaced dummy titles with actual titles. Specified a width for the banner-div to prevent the gradient from scaling with the window. Have some visual assets left to create; nav baground image, and a logo.
