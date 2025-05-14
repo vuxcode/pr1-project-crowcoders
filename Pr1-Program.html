@@ -127,27 +127,21 @@
       </script>
 
       <script> // Interactivity, on click
-        // Declare var 
+     // Declare var 
         var clickedTile = 0;
-        var counter = 0; // ??
-        var counter2 = 0; // ??
+        var tileRow = 0; // ??
+        
 
         function changeClass(input) {
-          console.log(input);
+          console.log("Clicked tile ID: " + input);
 
           // Update var to store user input
           clickedTile = input;
           var tile = document.getElementById("tile" + input);
           
-          for (var counter = 0; counter < gameArea.length; counter++) {
-             if (gameArea[counter].indexOf(clickedTile) > -1) {
-                console.log("hello");
-
-              } else {
-            
-             
-              console.log("Hello2");
-          
+          for (var tileRow = 0; tileRow < gameArea.length; tileRow++) { // Checks the array to find the position/row of the clicked tile 
+             if (gameArea[tileRow].indexOf(clickedTile) > -1) { // 
+                console.log("The clicked tile is on array row: " + tileRow);
             }
           }
 
@@ -156,12 +150,12 @@
           //  take that var and +1 -1 etc.
           //  in if/else below, replace tile with the var created above? 
 
-          var adjecentUppLeft  = "ActivatedTile" - "gameArea[index]";
-          var adjecentUppRight = "ActivatedTile" - "gameArea[index] + 1";
-          var leftTile = "ActivatedTile--";
-          var rightTile = "ActivatedTile++";
-          var adjecentDownLeft = "ActivatedTile" + "gameArea[index]";
-          var adjecentDownRight = "ActivatedTile" + "gameArea[index] - 1";
+          var adjecentUppLeft  = "clickedTile" - "gameArea[tileRow]";
+          var adjecentUppRight = "clickedTile" - "gameArea[tileRow] + 1";
+          var leftTile = clickedTile--;
+          var rightTile = clickedTile++;
+          var adjecentDownLeft = "ActivatedTile" + "gameArea[tileRow]";
+          var adjecentDownRight = "ActivatedTile" + "gameArea[tileRow] - 1";
 
           // Need another if/else statement(?) for the edge tiles to prevent overlap? Might not need, edges might not process.
 
@@ -177,7 +171,7 @@
 
       <script> // Check game state (win)
       // When all tiles (gameArea?) are either ON or OFF, display win message (alert?)
-      // Need to define when all tiles .contains... win?
+      // Need to define when all tiles .contains("on")/("off")... win?
 
       </script>
 

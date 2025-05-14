@@ -8,7 +8,7 @@
 }
 header {
     height: 100px;
-    /* Gradient is currently mbeing adjusted when resizing window. Specify width.*/
+    width: 1870px; /* Defined width to stop the banner from moving when resizing the window*/
     background-image: radial-gradient(circle,rgb(238, 226, 174) 0%, rgb(90, 66, 128) 100%);
 }
 
@@ -30,9 +30,13 @@ nav {
     width: 200px;
     height: 570px;
     background-image: url(images/PLACEHOLDER.png);
-    /* border-top-left-radius: 5px; */
+    border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    margin: 10px 0 0 0px;
+    margin: 20px 0px 0px 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 article { /* Game "container"*/
@@ -41,19 +45,20 @@ article { /* Game "container"*/
     min-height: 900px; 
     padding: 10px;
     background-color: bisque;
-    margin: 10px 0 0 0px;
-}
-
-button {
-    border-radius: 5px;
+    margin: 20px 0px 20px 0px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 menu {
-    height: 100px;
+    height: 90px;
+    margin: 5px;
     background-color: #333;
     border-radius: 5px;
     list-style-type: none;
 }
+
 menu li a {
     display: block;
     color: white;
@@ -63,14 +68,23 @@ menu li a {
 }
 menu li a:hover {
     background-color: slategrey;
-    border-radius: 5px;;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px hsla(0, 0%, 0%, 0.25);
 }
 
 menu li a:active {
-    box-shadow: 2px 2px 5px #fc894d;
+    box-shadow: inset 0px 3px 3px hwb(209 27% 63%);
 }
 
-#breadcrumbs {
+#intro { /* Page title spacing */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 650px;
+    text-align: center;
+}
+
+.intro { /* Text spacing */
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -87,6 +101,10 @@ menu li a:active {
     background-color: #586f6b;
 }
 
+iframe {
+    padding-top: 20px;
+}
+
 footer {
     overflow: hidden;
     background-color: antiquewhite;
@@ -96,32 +114,34 @@ footer {
 /* CSS for the Contact-page */
 legend {
     margin: 0 auto;
-  }
+}
 
-  form {
+form {
     width: 250px;
     margin: 0 auto;
-  }
-  label {
+    padding-top: 20px;
+}
+
+label {
     display: block;
     margin: 0 10px;
-  }
+}
 
-  input {
+input {
     margin: 10px 10px;
     width: 250px;
     padding: 10px;
     font-size: 125%;
-  }
+}
 
-  textarea {
+textarea {
     width: 250px;
     margin: 10px 10px;
     padding: 10px;
     resize: vertical;
-  }
+}
 
-  .sendButton {
+.sendButton {
     margin-left: 18px;
-    color: steelblue;
-  }
+    color: darkslateblue;
+}
