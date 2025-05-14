@@ -123,3 +123,5 @@ Attended workshop in school. Did some mock-code on my own, trying to break down 
 -(15 min. Webdev). Fixed some spacing on the contact-page. Changed color (to a darker blue) on the Send-button for more contrast.
 
 Attended workshop in school. Got some help with cleaning up the syntax. Still need some assistance with formulating the rest of the changeClass function. 
+
+-(2 hrs. Both). Webdev, misc fixes ex. spacing added more documentation, added borders to the menu buttons when hovered, changed overall colors for the website, added gradients to the footer. Programming, further clarified things in the console by combining strings and vars. Working on adjusting the math behind the adjecent tiles.
