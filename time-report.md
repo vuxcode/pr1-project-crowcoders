@@ -118,3 +118,8 @@ Attended workshop in school. Did some mock-code on my own, trying to break down 
   » and writing down a project summary and user instructions.
 
   - (1,5-2 hrs. Webdev). Tinkered further with the website design. Playing around with padding & margin, (almost went insane because at one point I missed to define unit of measurement for the margin & it took me a while to notice that was why my page was attempting to enter orbit). <br> Added some effects (box-shadow) to the menu buttons (hover/activated) and played around with rounded corners (border-radius). Re-structured a bit of the HTML for easier control, (added a div for the content text rather than having a p element). Drafted some quick text for the main & contact page to replace eventually replace the lorem ipsum. Replaced dummy titles with actual titles. Specified a width for the banner-div to prevent the gradient from scaling with the window. Have some visual assets left to create; nav baground image, and a logo.
+
+**Wednesday, 2025-05-14**
+-(15 min. Webdev). Fixed some spacing on the contact-page. Changed color (to a darker blue) on the Send-button for more contrast.
+
+Attended workshop in school. Got some help with cleaning up the syntax. Still need some assistance with formulating the rest of the changeClass function. 
