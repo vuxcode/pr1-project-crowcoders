@@ -9,7 +9,12 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 # Project Summary
 
-> Before the final submission date you should include a "PROJECT SUMMARY" in this section here. 
+> As a reminder, the project summary should cover the following points:
+
+A description of how you want to present the project to the world
+A reflection of the experiences you had while creating the project
+A list of what could be improved in the project if you had more time?
+A conclusion on the budget. Did you manage to stick to the budget? Why? / Why not?
 
 # User Guide
 
