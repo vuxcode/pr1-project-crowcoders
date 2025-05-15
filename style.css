@@ -116,7 +116,8 @@ footer {
     text-align: center;
 }
 
-/* CSS for the Contact-page */
+
+/* CSS for the Contact-page, specifically the FORM */
 legend {
     margin: 0 auto;
 }
@@ -149,4 +150,58 @@ textarea {
 .sendButton {
     margin-left: 18px;
     color: #18191b;
+}
+
+
+/* CSS for the Game Assets*/
+#gameBoard {
+  text-align: center;
+  line-height: 0;
+}
+
+.intro {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+/* .row {
+  display: block;
+} */
+
+#Randomize {  /* CSS for randomize button */
+  width: 100px;
+  height: 25px;
+  background-color: bisque;
+}
+
+/* CSS for the color change */
+  button, .on {
+  display: inline-block;
+  width: 50px;
+  height: 50px; /* adjust to control the size  
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
+  border:1px solid #ffc757;
+  background-color: #fca311;
+}
+      
+button, .off { /* Default tile */
+  display: inline-block;
+  width: 50px;
+  height: 50px; /* adjust to control the size  
+  aspect-ratio: cos(30deg);
+  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
+  border:1px solid #001427;
+  background-color: #14213d;
+  border-radius: 50px; /* Circle shape */
+}
+
+button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
+border: 1px solid #e5e5e5;
+}
+
+/* Misc Buttons/Controlls */
+.buttons {
+    margin-top: 30px;
+    text-align: center;
 }

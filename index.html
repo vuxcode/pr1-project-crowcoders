@@ -1,46 +1,323 @@
 <!DOCTYPE html>
+
+<html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grid Lighter</title>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+	
+	  <title>Lights Low ✨</title>
+    <!-- Tab icon -->
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="images/favicon.png">
 
-    <style> /* Resetting browser styles */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-    </style>
-
-    <style>
-      /* CSS for the Website goes here*/
-    </style>
-
-    <style>
-    /* CSS for the game board goes here*/
+    <style> /* Importing font from google*/
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
     </style>
   </head>
 
-  <body>
-   <div class="mainPage">
-    <!-- HTML for webpage starts here-->
-  
-    <!-- Basic instructions placeholder -->
-    <p class="intro">Click the buttons below!</p>
+  <body  onload="randomizeTiles()"> <!-- Generating Game assets NOTE: use onload=function() to have the tiles generate when page is loaded-->
+    <header>
+      <div class="banner">
+        <div class="logo">
+          <a href="#"><img src="?.png" alt="Website Logo"></a>
+        </div>
+      </div>
+    </header>
 
-    <div id="gameBoard">
-      <!-- HTML for Game goes here-->
-    </div>
+    <main> 
+      
+      <div class="page">
+        
+        <!-- Navigation menu -->
+        <nav> <!--"Left column"-->
+          <menu>
+            <li><a href="index.html">Home</a></li> <!-- Remember to reame this to index.html -->
+            <li><a href="./pages/about.html">About</a></li>
+            <li><a href="./pages/contact.html">Contact</a></li>
+          </menu>
+        </nav>
+        
+        <!-- Main column. Program/Game area -->
+        <article> 
+          <div class="miniNav"><a href="index.html">Home</a>  » Game </div>
+          <div id="intro">
+            <h1>Lights Low</h1>
+          </div>
+          <div class="gameBoard">
+          <!---CODE FOR GAME GOES HERE-->
+          <div id="gameBoard">
+        <script>
+          
+          var gameArea = [];
+          var htmlElements = ""; // Variable used to print out the html
+          var iD = 1; // Variable to add unique IDs to the generated tiles. Starting at 1.
 
-  </div>
+          // FIRST HALF. Note: row = rader, col ~tiles
+          /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
+          for (var row = 1; row < 4; row++) {
+            // COLIN: START A NEW ROW ARRAY HERE
+            var arrayFirstHalf = [];
+          // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
+            for (var col = 1; col <= 3 + row; col++) {
+              // COLIN: ADD THE CURRENT ID NUMBER TO THE CURRENT ROW ARRAY HERE
+              arrayFirstHalf.push(iD);
+              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
+          // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
+            }
+          // COLIN: WHEN THE LOOP IS FINISHED FOR THE CURRENT ROW THEN ADD THE ROW ARRAY TO THE GAME AREA ARRAY
+            gameArea.push(arrayFirstHalf);
 
-  <script>
-  /*Script goes here*/
-  </script>
+            htmlElements += `<br>`;
+          }
 
-  <footer>
+          // SECOND HALF. Note: row = rader, col ~tiles
+          /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
+          for (var row = 1; row < 5; row++) {
+            var arraySecondHalf = [];
+            for (var col = 1; col <= 8 - row; col++) {
+              arraySecondHalf.push(iD);
+              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`;
+            }
+            gameArea.push(arraySecondHalf);
+
+            htmlElements += `<br>`;
+        }
+
+        // Print out the above into the gameBoard
+          document.getElementById("gameBoard").innerHTML = htmlElements;
+          // Confirming that the program prints the HTML 
+          // console.log(htmlElements);
+        </script>      
+      </div>
+
+      <div class="buttons">
+        <button id="Randomize" onclick="randomizeTiles()">Randomize</button> <!-- Creating a control for the user to manually randomize a board. -->
+      </div>
+
+      <script> // Generating starting board
+        function randomizeTiles() {
+          for(var i=0; i < row*col; i++)
+            changeClass(Math.floor(Math.random()*row*col)); // Randomly getting errors in console. Might need to define min-max nr? Tho I feel like row*col should do that already?
+      }
+      </script>
+
+      <script> // Interactivity, on click
+      // Declare var to store clicked tile ID
+        var clickedTileID = 0;
+      // Only used in for-loop
+        var tileRowCounter = 0;
+
+      // Declare var to hold the index Row and Col of the clicked tile
+        var clickedRow = 0;
+        var colPos = 0;
+        
+      // Delare var to hold the index Row above and Below the clicked tile
+        var rowAbove = 0;
+        var rowBelow = 0;
+
+      // Diagonal tiles col array index
+        var adjecentUpLeft  = 0;
+        var adjecentUpRight = 0;
+            
+        var adjecentDownLeft = 0;
+        var adjecentDownRight = 0;
+
+      // Next-to-clicked tiles array index
+        var leftTile = 0;
+        var rightTile = 0;
+
+      // Surrounding Tile IDs 
+        var topRID = 0;
+        var topLID = 0;
+
+        var bottomRID = 0;
+        var bottomLID = 0;
+
+        var tileRID = 0;
+        var tileLID = 0;
+
+      // FUNCTION START
+        function changeClass(input) {
+          // Solving the edge case? Maybe if statement to check if there even Are tiles
+          console.log("Clicked tile ID: " + input);
+
+          // Update var to store user input
+          clickedTileID = input;
+          var tile = document.getElementById("tile" + input);
+
+        // If/else for THE click
+          if (tile.classList.contains("on")) {
+              tile.classList.remove("on");
+              tile.classList.add("off");
+          } else {
+              tile.classList.remove("off");
+              tile.classList.add("on");
+          }
+          
+        // Checks the array to find the position of the clicked tile in the gameArea array.
+          for (var tileRowCounter = 0; tileRowCounter < gameArea.length; tileRowCounter++) {  
+             if (gameArea[tileRowCounter].indexOf(clickedTileID) > -1) {  
+                console.log("The clicked tile is on array row: " + tileRowCounter + " and column: " + gameArea[tileRowCounter].indexOf(clickedTileID));
+              
+                clickedRow = tileRowCounter; break; // Exit loop when row of clickedTile ID is found
+            }
+          }
+
+        // Update var to hold the index Row and Col of the clicked tile
+          colPos = gameArea[clickedRow].indexOf(clickedTileID);
+        // Updating var to hold the row above and below the clicked row
+          rowAbove = clickedRow - 1;
+          rowBelow = clickedRow + 1;
+
+
+        
+      // Checking surrounding tiles
+        // Updating the array index to be the index of the cardinal directions (L / R) of clicked tile
+        leftTile = colPos - 1;
+        rightTile = colPos + 1;
+
+      // Updating the array index of the UPPERR INTERCARDINAL tiles, depending on if the row length is bigger or smaller than the row that contains the Clicked tile
+      if (gameArea[rowAbove]) {
+
+        if (gameArea[rowAbove] && gameArea[clickedRow].length > gameArea[rowAbove].length) {
+            adjecentUpLeft = colPos - 1;
+            adjecentUpRight = colPos;
+
+        } else if (gameArea[rowAbove] && gameArea[clickedRow].length < gameArea[rowAbove].length) {
+            adjecentUpLeft = colPos;
+            adjecentUpRight = colPos + 1;
+        }
+         topRID = gameArea[rowAbove][adjecentUpRight];
+         topLID = gameArea[rowAbove][adjecentUpLeft];
+         
+        if (gameArea[rowAbove][adjecentUpRight]) { // Checks if UpRight tile exists
+        // Uses the ID that was called and stored above to .getElementById for the Top Right tile, then runs If else to flip the class
+          var tileTopR = document.getElementById("tile" + topRID);
+
+          // If/else to flip class of tile Top Right
+          if (tileTopR.classList.contains("on")) {
+              tileTopR.classList.remove("on");
+              tileTopR.classList.add("off");
+          } else {
+              tileTopR.classList.remove("off");
+              tileTopR.classList.add("on");
+          }
+         }
+
+        if (gameArea[rowAbove][adjecentUpLeft]) { // Checks if UpLeft tile exists
+        // Uses the ID that was called and stored above to .getElementById for the Top Left tile, then runs If else to flip the class
+          var tileTopL = document.getElementById("tile" + topLID);
+
+          // If/else to flip class of tile Top Left
+          if (tileTopL.classList.contains("on")) {
+              tileTopL.classList.remove("on");
+              tileTopL.classList.add("off");
+          } else {
+              tileTopL.classList.remove("off");
+              tileTopL.classList.add("on");
+          }
+         }
+        } 
+      
+      // Updating the array index of the LOWER INTERCARDINAL tiles, depending on if the row length is bigger or smaller than the row that contains the Clicked tile
+        if (gameArea[rowBelow]) { // Checking if rowBelow Exists
+          if (gameArea[rowBelow] && gameArea[clickedRow].length > gameArea[rowBelow].length) {
+            adjecentDownLeft = colPos - 1;
+            adjecentDownRight = colPos;
+          } else if (gameArea[rowBelow] && gameArea[clickedRow].length < gameArea[rowBelow].length) {
+            adjecentDownLeft = colPos;
+            adjecentDownRight = colPos + 1;
+          }
+          bottomRID = gameArea[rowBelow][adjecentDownRight];
+          bottomLID = gameArea[rowBelow][adjecentDownLeft];
+
+          if (gameArea[rowBelow][adjecentDownRight]) { // Checks if DownRight tile exists
+        // Uses the ID that was called and stored above to .getElementById for the Bottom Right tile, then runs If else to flip the class
+          var tileBottomR = document.getElementById("tile" + bottomRID);
+         // If/else to flip class of tile Bottom Right
+          if (tileBottomR.classList.contains("on")) {
+              tileBottomR.classList.remove("on");
+              tileBottomR.classList.add("off");
+          } else {
+              tileBottomR.classList.remove("off");
+              tileBottomR.classList.add("on");
+          }
+        }
+
+
+      // Checking the CARDINAL tiles
+          if (gameArea[rowBelow][adjecentDownLeft]) { // Checks if DownLeft tile exists
+        // Uses the ID that was called and stored above to .getElementById for the Bottom Left, then runs If else to flip the class
+          var tileBottomL = document.getElementById("tile" + bottomLID);
+          // If/else to flip class of tile Bottom Left
+           if (tileBottomL.classList.contains("on")) {
+              tileBottomL.classList.remove("on");
+              tileBottomL.classList.add("off");
+          } else {
+              tileBottomL.classList.remove("off");
+              tileBottomL.classList.add("on");
+          }
+        }
+      }  
+        
+      if (gameArea[clickedRow][rightTile]) { // Checks if Right tile exists
+        tileRID = gameArea[clickedRow][rightTile]; // If exist, grab index ID, store in var
+        var tileR = document.getElementById("tile" + tileRID);
+      // If/else to flip class of tile Right
+        if (tileR.classList.contains("on")) {
+            tileR.classList.remove("on");
+            tileR.classList.add("off");
+        } else {
+            tileR.classList.remove("off");
+            tileR.classList.add("on");
+        }
+      }
+
+      if (gameArea[clickedRow][leftTile]) { // Checks if Left tile exists
+        tileLID = gameArea[clickedRow][leftTile];
+        var tileL = document.getElementById("tile" + tileLID);
+      // If/else to flip class of tile Left
+        if (tileL.classList.contains("on")) {
+            tileL.classList.remove("on");
+            tileL.classList.add("off");
+        } else {
+            tileL.classList.remove("off");
+            tileL.classList.add("on");
+        }
+      }  
+      if (checkWin()) {
+        setTimeout(() => {alert("WIN");}, 100); // Using arrow function to allow for simplified function syntax. Good for when only One task should be executed.
+      }  
+    } // changeClass() END
+      </script>
+
+      <script> // Check game state (win)
+        function checkWin () {
+          var totalTiles = document.querySelectorAll("button[id^=tile]").length; // ^= is an attribute selector. "The Document method querySelector() returns the first Element within the document that matches the specified CSS selector, or group of CSS selectors."
+          var onTiles = document.getElementsByClassName("on").length; // "The getElementsByClassName method of Document interface returns an array-like object of all child elements which have all of the given class name(s)."
+          var offTiles = document.getElementsByClassName("off").length;
+
+          return onTiles === totalTiles || offTiles === totalTiles; // Checks how many tiles are on OR off, return true
+        }
+      </script>
+    </div>  <!---CODE FOR GAME ENDS HERE-->
+
+          <div class="intro">
+            <p>How to play:<br>
+              The goal of the game is to make all the tiles display the same color, gold or violet.
+              Sounds simple enough, but for every tile you click, the adjecent tiles will shift as well!
+            </p>
+          </div>
+
+        </article>
+
+
+      </div> <!-- End tag for .page -->
+    </main>
     
-  </footer>
- </body>
+    
+   <footer>
+    <div class='footer-item'>Footer text placeholder (c) copytight My Cat 2025</div>
+   </footer>
+  </body>
 </html>
-
