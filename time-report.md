@@ -135,3 +135,5 @@ Attended workshop in school. Got help refining the code structure further and so
 - (2 hrs? Programming). Finished up the if/else structuring that was started at the workshop: <br>
 For each Row of tiles (upper and lower cardinal directions, as well as the row where the user-clicked tile is located), there is an if/else statement that checks that the row and tile exists. If they exist, depending on if the row is longer or shoter than the clicked row, then different math applies to find the correct index of the adjacent tiles. <br>
 Also updated previous documentation and added more/new comments to try and explain the code better, both for myself and others.
+
+- (20 min. Both). Added the Program code to the Website file. Renamed the We1-Website.html to index.html. Any future changes will be seen in that file from now on. Added a div around the Randomize button to better control positioning. Fixed links as they broke when renaming the Website file. Also fixed them in the "mini-nav" as I had forgotten to do so until now. <br> Still need a logo.
