@@ -196,12 +196,12 @@
 
 
         
-      // IF/ELSE HELL STARTS HERE
-        // Updating the array index to be the index to the L / R of clicked tile
+      // Checking surrounding tiles
+        // Updating the array index to be the index of the cardinal directions (L / R) of clicked tile
         leftTile = colPos - 1;
         rightTile = colPos + 1;
 
-      // Updating the array index of the UPPER right / left of clicked tile, depending on if the row length is bigger or smaller than the clicked row
+      // Updating the array index of the UPPERR INTERCARDINAL tiles, depending on if the row length is bigger or smaller than the row that contains the Clicked tile
       if (gameArea[rowAbove]) {
 
         if (gameArea[rowAbove] && gameArea[clickedRow].length > gameArea[rowAbove].length) {
@@ -216,7 +216,7 @@
          topLID = gameArea[rowAbove][adjecentUpLeft];
          
         if (gameArea[rowAbove][adjecentUpRight]) { // Checks if UpRight tile exists
-          // Uses the ID that was called and stored above to .getElementById for the Top Right tile, then runs If else to flip the class
+        // Uses the ID that was called and stored above to .getElementById for the Top Right tile, then runs If else to flip the class
           var tileTopR = document.getElementById("tile" + topRID);
 
           // If/else to flip class of tile Top Right
@@ -230,7 +230,7 @@
          }
 
         if (gameArea[rowAbove][adjecentUpLeft]) { // Checks if UpLeft tile exists
-          // Uses the ID that was called and stored above to .getElementById for the Top Left tile, then runs If else to flip the class
+        // Uses the ID that was called and stored above to .getElementById for the Top Left tile, then runs If else to flip the class
           var tileTopL = document.getElementById("tile" + topLID);
 
           // If/else to flip class of tile Top Left
@@ -244,11 +244,9 @@
          }
         } 
       
-      // Updating the array index of the BOTTOM right / left of clicked tile, depending on if the row length is bigger or smaller than the clicked row
-        // Checking if rowBelow Exists
-        if (gameArea[rowBelow]) {
+      // Updating the array index of the LOWER INTERCARDINAL tiles, depending on if the row length is bigger or smaller than the row that contains the Clicked tile
+        if (gameArea[rowBelow]) { // Checking if rowBelow Exists
           if (gameArea[rowBelow] && gameArea[clickedRow].length > gameArea[rowBelow].length) {
-            // console.log("ARE WE HERE?"); // THIS TELLS US THAT THERE IS A ROW
             adjecentDownLeft = colPos - 1;
             adjecentDownRight = colPos;
           } else if (gameArea[rowBelow] && gameArea[clickedRow].length < gameArea[rowBelow].length) {
@@ -271,6 +269,8 @@
           }
         }
 
+
+      // Checking the CARDINAL tiles
           if (gameArea[rowBelow][adjecentDownLeft]) { // Checks if DownLeft tile exists
         // Uses the ID that was called and stored above to .getElementById for the Bottom Left, then runs If else to flip the class
           var tileBottomL = document.getElementById("tile" + bottomLID);
@@ -311,16 +311,15 @@
         }
       }  
       if (checkWin()) {
-        setTimeout(() => {alert("WIN");}, 100); // Using arrow function
+        setTimeout(() => {alert("WIN");}, 100); // Using arrow function to allow for simplified function syntax. Good for when only One task should be executed.
       }  
-    } // Function END
+    } // changeClass() END
       </script>
 
       <script> // Check game state (win)
-      
         function checkWin () {
-          var totalTiles = document.querySelectorAll("button[id^=tile]").length; // ^= is an attribute selector
-          var onTiles = document.getElementsByClassName("on").length;
+          var totalTiles = document.querySelectorAll("button[id^=tile]").length; // ^= is an attribute selector. "The Document method querySelector() returns the first Element within the document that matches the specified CSS selector, or group of CSS selectors."
+          var onTiles = document.getElementsByClassName("on").length; // "The getElementsByClassName method of Document interface returns an array-like object of all child elements which have all of the given class name(s)."
           var offTiles = document.getElementsByClassName("off").length;
 
           return onTiles === totalTiles || offTiles === totalTiles; // Checks how many tiles are on OR off, return true
