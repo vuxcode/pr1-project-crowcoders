@@ -113,7 +113,7 @@
         // Print out the above into the gameBoard
           document.getElementById("gameBoard").innerHTML = htmlElements;
           // Confirming that the program prints the HTML 
-          console.log(htmlElements);
+          // console.log(htmlElements);
         </script>      
       </div>
 
@@ -163,6 +163,7 @@
 
       // FUNCTION START
         function changeClass(input) {
+          // Solving the edge case? Maybe if statement to check if there even Are tiles
           console.log("Clicked tile ID: " + input);
 
           // Update var to store user input
@@ -202,24 +203,57 @@
 
 
         // Updating the array index of the UPPER right / left of clicked tile, depending on if the row length is bigger or smaller than the clicked row
-          if (gameArea[clickedRow].length > gameArea[rowAbove].length) {
+          if (gameArea[rowAbove] && gameArea[clickedRow].length > gameArea[rowAbove].length) {
             adjecentUpLeft = colPos - 1;
             adjecentUpRight = colPos;
 
-          } else {
+          } else if (gameArea[rowAbove] && gameArea[clickedRow].length < gameArea[rowAbove].length) {
             adjecentUpLeft = colPos;
             adjecentUpRight = colPos + 1;
           }
-
+          
         // Updating the array index of the BOTTOM right / left of clicked tile, depending on if the row length is bigger or smaller than the clicked row
-          if (gameArea[clickedRow].length > gameArea[rowBelow].length) {
+        if (gameArea[rowBelow]) {
+          if (gameArea[rowBelow] && gameArea[clickedRow].length > gameArea[rowBelow].length) {
+            console.log("ARE WE HERE?"); // THIS TELLS US THAT THERE IS A ROW
             adjecentDownLeft = colPos - 1;
             adjecentDownRight = colPos;
-
-          } else {
+          } else if (gameArea[rowBelow] && gameArea[clickedRow].length < gameArea[rowBelow].length) {
             adjecentDownLeft = colPos;
             adjecentDownRight = colPos + 1;
           }
+          bottomRID = gameArea[rowBelow][adjecentDownRight];
+          bottomLID = gameArea[rowBelow][adjecentDownLeft];
+
+        if (gameArea[rowBelow][adjecentDownRight]) {
+        // Uses the ID that was called and stored above to .getElementById for the Bottom Right tile, then runs If else to flip the class
+          var tileBottomR = document.getElementById("tile" + bottomRID);
+         // If/else to flip class of tile Bottom Right
+          if (tileBottomR.classList.contains("on")) {
+              tileBottomR.classList.remove("on");
+              tileBottomR.classList.add("off");
+          } else {
+              tileBottomR.classList.remove("off");
+              tileBottomR.classList.add("on");
+          }
+        }
+
+        if (gameArea[rowBelow][adjecentDownLeft]) {
+        // Uses the ID that was called and stored above to .getElementById for the Bottom Left, then runs If else to flip the class
+          var tileBottomL = document.getElementById("tile" + bottomLID);
+          // If/else to flip class of tile Bottom Left
+           if (tileBottomL.classList.contains("on")) {
+              tileBottomL.classList.remove("on");
+              tileBottomL.classList.add("off");
+          } else {
+              tileBottomL.classList.remove("off");
+              tileBottomL.classList.add("on");
+          }
+        }
+        }  
+        
+        
+          
       // END OF UPDATING ARRAY INDEXES
 
 
@@ -227,8 +261,8 @@
           topRID = gameArea[rowAbove][adjecentUpRight];
           topLID = gameArea[rowAbove][adjecentUpLeft];
 
-          bottomRID = gameArea[rowBelow][adjecentDownRight];
-          bottomLID = gameArea[rowBelow][adjecentDownLeft];
+          // bottomRID = gameArea[rowBelow][adjecentDownRight];
+          // bottomLID = gameArea[rowBelow][adjecentDownLeft];
 
           tileRID = gameArea[clickedRow][rightTile];
           tileLID = gameArea[clickedRow][leftTile];
@@ -263,29 +297,31 @@
 
 
 
-          // Uses the ID that was called and stored above to .getElementById for the Bottom Right tile, then runs If else to flip the class
-          var tileBottomR = document.getElementById("tile" + bottomRID);
+          // // Uses the ID that was called and stored above to .getElementById for the Bottom Right tile, then runs If else to flip the class
+          // var tileBottomR = document.getElementById("tile" + bottomRID);
 
-          // If/else to flip class of tile Bottom Right
-          if (tileBottomR.classList.contains("on")) {
-              tileBottomR.classList.remove("on");
-              tileBottomR.classList.add("off");
-          } else {
-              tileBottomR.classList.remove("off");
-              tileBottomR.classList.add("on");
-          }
+          // // If/else to flip class of tile Bottom Right
+          // if (tileBottomR.classList.contains("on")) {
+          //     tileBottomR.classList.remove("on");
+          //     tileBottomR.classList.add("off");
+          // } else {
+          //     tileBottomR.classList.remove("off");
+          //     tileBottomR.classList.add("on");
+          // }
 
-          // Uses the ID that was called and stored above to .getElementById for the Bottom Left, then runs If else to flip the class
-          var tileBottomL = document.getElementById("tile" + bottomLID);
+          // // Uses the ID that was called and stored above to .getElementById for the Bottom Left, then runs If else to flip the class
+          // var tileBottomL = document.getElementById("tile" + bottomLID);
 
-          // If/else to flip class of tile Bottom Left
-          if (tileBottomL.classList.contains("on")) {
-              tileBottomL.classList.remove("on");
-              tileBottomL.classList.add("off");
-          } else {
-              tileBottomL.classList.remove("off");
-              tileBottomL.classList.add("on");
-          }
+          // // If/else to flip class of tile Bottom Left
+          // if (tileBottomL.classList.contains("on")) {
+          //     tileBottomL.classList.remove("on");
+          //     tileBottomL.classList.add("off");
+          // } else {
+          //     tileBottomL.classList.remove("off");
+          //     tileBottomL.classList.add("on");
+          // }
+
+
 
             // Uses the ID that was called and stored above to .getElementById for the Right tile, then runs If else to flip the class
           var tileR = document.getElementById("tile" + tileRID);
