@@ -125,3 +125,7 @@ Attended workshop in school. Did some mock-code on my own, trying to break down 
 Attended workshop in school. Got some help with cleaning up the syntax. Still need some assistance with formulating the rest of the changeClass function. 
 
 - (2 hrs. Both). Webdev, misc fixes ex. spacing added more documentation, added borders to the menu buttons when hovered, changed overall colors for the website, added gradients to the footer. Programming, further clarified things in the console by combining strings and vars. Working on adjusting the math behind the adjecent tiles.
+
+**Thursday, 2025-05-15**
+- (2,5 hrs. Programming). Added a bunch of variables and updated them to hold the array indexes of clicked tile, the adjecent directional tiles and then stored the ID in those Indexes in more vars. Used those vars to create if/else statements to change the surroundintg tiles. TL;DR: Using array index IDs as a basis for the math (instead of the Button IDs).<br>
+- So that works now, the tiles do flip as intended, but edges aren't working. Potential solution (?): adding an invisible array of tiles arround the visible game area?
