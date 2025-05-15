@@ -88,7 +88,7 @@
             for (var col = 1; col <= 3 + row; col++) {
               // COLIN: ADD THE CURRENT ID NUMBER TO THE CURRENT ROW ARRAY HERE
               arrayFirstHalf.push(iD);
-              htmlElements += `<button onclick="changeClass(${iD}); checkWin()" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
+              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
           // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
             }
           // COLIN: WHEN THE LOOP IS FINISHED FOR THE CURRENT ROW THEN ADD THE ROW ARRAY TO THE GAME AREA ARRAY
@@ -103,7 +103,7 @@
             var arraySecondHalf = [];
             for (var col = 1; col <= 8 - row; col++) {
               arraySecondHalf.push(iD);
-              htmlElements += `<button onclick="changeClass(${iD}); checkWin()" id='tile`+ iD++ + `'>` + `</button>`;
+              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`;
             }
             gameArea.push(arraySecondHalf);
 
@@ -248,7 +248,7 @@
         // Checking if rowBelow Exists
         if (gameArea[rowBelow]) {
           if (gameArea[rowBelow] && gameArea[clickedRow].length > gameArea[rowBelow].length) {
-            console.log("ARE WE HERE?"); // THIS TELLS US THAT THERE IS A ROW
+            // console.log("ARE WE HERE?"); // THIS TELLS US THAT THERE IS A ROW
             adjecentDownLeft = colPos - 1;
             adjecentDownRight = colPos;
           } else if (gameArea[rowBelow] && gameArea[clickedRow].length < gameArea[rowBelow].length) {
@@ -287,9 +287,7 @@
         
       if (gameArea[clickedRow][rightTile]) { // Checks if Right tile exists
         tileRID = gameArea[clickedRow][rightTile]; // If exist, grab index ID, store in var
-
         var tileR = document.getElementById("tile" + tileRID);
-
       // If/else to flip class of tile Right
         if (tileR.classList.contains("on")) {
             tileR.classList.remove("on");
@@ -302,9 +300,7 @@
 
       if (gameArea[clickedRow][leftTile]) { // Checks if Left tile exists
         tileLID = gameArea[clickedRow][leftTile];
-
         var tileL = document.getElementById("tile" + tileLID);
-
       // If/else to flip class of tile Left
         if (tileL.classList.contains("on")) {
             tileL.classList.remove("on");
@@ -313,24 +309,22 @@
             tileL.classList.remove("off");
             tileL.classList.add("on");
         }
-      }    
+      }  
+      if (checkWin()) {
+        setTimeout(() => {alert("WIN");}, 100); // Using arrow function
+      }  
     } // Function END
       </script>
 
       <script> // Check game state (win)
       
         function checkWin () {
-          if (document.getElementsByClassName("on")[0] || document.getElementsByClassName("off")[0]) {
-            console.log("You won!");
-            alert("Congrats, you won!");
+          var totalTiles = document.querySelectorAll("button[id^=tile]").length; // ^= is an attribute selector
+          var onTiles = document.getElementsByClassName("on").length;
+          var offTiles = document.getElementsByClassName("off").length;
 
-          }
-
+          return onTiles === totalTiles || offTiles === totalTiles; // Checks how many tiles are on OR off, return true
         }
-
-
-        
-
       </script>
 
   </body>
