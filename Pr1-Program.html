@@ -88,7 +88,7 @@
             for (var col = 1; col <= 3 + row; col++) {
               // COLIN: ADD THE CURRENT ID NUMBER TO THE CURRENT ROW ARRAY HERE
               arrayFirstHalf.push(iD);
-              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
+              htmlElements += `<button onclick="changeClass(${iD}); checkWin()" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
           // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
             }
           // COLIN: WHEN THE LOOP IS FINISHED FOR THE CURRENT ROW THEN ADD THE ROW ARRAY TO THE GAME AREA ARRAY
@@ -103,7 +103,7 @@
             var arraySecondHalf = [];
             for (var col = 1; col <= 8 - row; col++) {
               arraySecondHalf.push(iD);
-              htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`;
+              htmlElements += `<button onclick="changeClass(${iD}); checkWin()" id='tile`+ iD++ + `'>` + `</button>`;
             }
             gameArea.push(arraySecondHalf);
 
@@ -314,12 +314,22 @@
             tileL.classList.add("on");
         }
       }    
-  } // Function END
+    } // Function END
       </script>
 
       <script> // Check game state (win)
-      // When all tiles (gameArea?) are either ON or OFF, display win message (alert?)
-      // Need to define when all tiles .contains("on")/("off")... win?
+      
+        function checkWin () {
+          if (document.getElementsByClassName("on")[0] || document.getElementsByClassName("off")[0]) {
+            console.log("You won!");
+            alert("Congrats, you won!");
+
+          }
+
+        }
+
+
+        
 
       </script>
 
