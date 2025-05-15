@@ -127,10 +127,18 @@
       </script>
 
       <script> // Interactivity, on click
-     // Declare var 
+      // Declare var 
         var clickedTile = 0;
-        var tileRow = 0; // ??
+        var tileRow = 0;
+
+      // Declare var to hold the Row and Col of the clicked tile
+        var clickedRow = 0;
+        var colPos = 0;
         
+      // Delare vars to hold row above m& below the clicked tile
+        var rowAbove = 0;
+        var rowBelow = 0;
+
 
         function changeClass(input) {
           console.log("Clicked tile ID: " + input);
@@ -138,27 +146,8 @@
           // Update var to store user input
           clickedTile = input;
           var tile = document.getElementById("tile" + input);
-          
-          for (var tileRow = 0; tileRow < gameArea.length; tileRow++) { // Checks the array to find the position/row of the clicked tile 
-             if (gameArea[tileRow].indexOf(clickedTile) > -1) { // 
-                console.log("The clicked tile is on array row: " + tileRow);
-            }
-          }
 
-          //  Add variables for other tiles??
-          //  Find which tile is being clicked, store in new var (Did I not already do that with the clickedTile = input? i am confusion.)
-          //  take that var and +1 -1 etc.
-          //  in if/else below, replace tile with the var created above? 
-
-          var adjecentUppLeft  = "clickedTile" - "gameArea[tileRow]";
-          var adjecentUppRight = "clickedTile" - "gameArea[tileRow] + 1";
-          var leftTile = clickedTile--;
-          var rightTile = clickedTile++;
-          var adjecentDownLeft = "ActivatedTile" + "gameArea[tileRow]";
-          var adjecentDownRight = "ActivatedTile" + "gameArea[tileRow] - 1";
-
-          // Need another if/else statement(?) for the edge tiles to prevent overlap? Might not need, edges might not process.
-
+          // If/else for THE click
           if (tile.classList.contains("on")) {
               tile.classList.remove("on");
               tile.classList.add("off");
@@ -166,6 +155,44 @@
               tile.classList.remove("off");
               tile.classList.add("on");
           }
+          
+          // Checks the array to find the position of the clicked tile in the gameArea array.
+          for (var tileRow = 0; tileRow < gameArea.length; tileRow++) {  
+             if (gameArea[tileRow].indexOf(clickedTile) > -1) {  
+                console.log("The clicked tile is on array row: " + tileRow + " and column: " + gameArea[tileRow].indexOf(clickedTile));
+              
+                clickedRow = tileRow; break;
+            }
+          }
+
+          colPos = gameArea[clickedRow].indexOf(clickedTile);
+          rowAbove = clickedRow - 1;
+          rowBelow = clickedRow + 1;
+
+
+
+   
+          // If/else statement for adjecent tiles (send help)
+          // if () {
+
+          // } else {
+
+          // }
+
+          //  Add variables for other tiles??
+          //  Find which tile is being clicked, store in new var (Did I not already do that with the clickedTile = input? i am confusion.)
+          //  take that var and +1 -1 etc.
+          //  in if/else below, replace tile with the var created above? 
+
+          // var adjecentUppLeft  = "clickedTile" - "gameArea[tileRow]";
+          // var adjecentUppRight = "clickedTile" - "gameArea[tileRow] + 1";
+          // var leftTile = clickedTile--;
+          // var rightTile = clickedTile++;
+          // var adjecentDownLeft = "ActivatedTile" + "gameArea[tileRow]";
+          // var adjecentDownRight = "ActivatedTile" + "gameArea[tileRow] - 1";
+
+          // Need another if/else statement(?) for the edge tiles to prevent overlap? Might not need, edges might not process.
+
         }
       </script>
 
