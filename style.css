@@ -8,7 +8,7 @@
 }
 header {
     height: 100px;
-    width: 1870px; /* Specify width to stop the gradient from moving when resizing the window*/
+    width: 100%; /* Specify width to stop the gradient from moving when resizing the window*/
     background-image: radial-gradient(circle, #f5f6fc85 0%, #332736ba 100%);
 }
 
@@ -51,6 +51,10 @@ article { /* Game "container"*/
     border-bottom-right-radius: 10px;
 }
 
+a {
+    color: #333;
+}
+
 menu {
     height: 95px;
     margin: 5px;
@@ -89,8 +93,8 @@ menu li a:active {
     text-align: center;
 }
 
-p {
-    padding: 2px;
+p { /* Paragraph, line spaceing */
+    padding: 5px;
 }
 
 .intro { /* Text spacing */
@@ -119,7 +123,7 @@ iframe {
 footer {
     overflow: hidden;
     background-image: radial-gradient(circle,#f5f6fc85, #332736ba);
-    width: 1870px; /* Specify width to stop the gradient from moving when resizing the window*/
+    width: 100%; /* Specify width to stop the gradient from moving when resizing the window*/
     text-align: center;
 }
 
@@ -127,6 +131,7 @@ footer {
 /* CSS for the Contact-page, specifically the FORM */
 legend {
     margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 form {
@@ -141,15 +146,15 @@ label {
 }
 
 input {
-    margin: 10px 10px;
     width: 250px;
+    margin: 4px 10px 10px 10px;
     padding: 10px;
     font-size: 125%;
 }
 
 textarea {
     width: 250px;
-    margin: 10px 10px;
+    margin: 4px 10px 10px 10px;
     padding: 10px;
     resize: vertical;
 }
@@ -172,18 +177,17 @@ textarea {
 } */
 
 #Randomize {  /* CSS for randomize button */
-  width: 100px;
-  height: 25px;
+  width: 110px;
+  height: 30px;
   background-color: bisque;
+  font-family: monospace;
 }
 
 /* CSS for the color change */
   button, .on {
   display: inline-block;
   width: 50px;
-  height: 50px; /* adjust to control the size  
-  aspect-ratio: cos(30deg);
-  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
+  height: 50px; /* adjust to control the size */
   border:1px solid #ffc757;
   background-color: #fca311;
 }
@@ -191,15 +195,13 @@ textarea {
 button, .off { /* Default tile */
   display: inline-block;
   width: 50px;
-  height: 50px; /* adjust to control the size  
-  aspect-ratio: cos(30deg);
-  clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
+  height: 50px; /* adjust to control the size */
   border:1px solid #001427;
   background-color: #63389c;
   border-radius: 50px; /* Circle shape */
 }
 
-button:hover{ /* Hover border is currently broken - doesn't match the hexagon shape */
+button:hover{ /* Hover effect for the game tiles */
 border: 1px solid #e5e5e5;
 }
 
@@ -207,4 +209,11 @@ border: 1px solid #e5e5e5;
 .buttons {
     margin-top: 30px;
     text-align: center;
+}
+
+#Randomize:hover {
+    /* border-top: 1px solid #ffc559;
+    border-bottom: 1px solid #ffc559;
+    border-radius: 50px; */
+    cursor: pointer;
 }
