@@ -9,12 +9,12 @@
 header {
     height: 100px;
     width: 1870px; /* Specify width to stop the gradient from moving when resizing the window*/
-    background-image: radial-gradient(circle,rgb(238, 226, 174) 0%, #332736ba 100%);
+    background-image: radial-gradient(circle, #f5f6fc85 0%, #332736ba 100%);
 }
 
 main {
     overflow: hidden;
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), #332736ba),
+    background-image: linear-gradient(to bottom, #f5f6fc85, #332736ba),
     url("images/we1-bgimg.png"); /* Background image with added transparent gradient*/
     background-size: auto;
 }
@@ -29,7 +29,7 @@ nav {
     float: left;
     width: 200px;
     height: 570px;
-    background-image: radial-gradient(circle,rgb(238, 226, 174) 0%, #332736ba 100%);
+    background-image: radial-gradient(circle,#f5f6fc85, #332736ba);
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin: 20px 0px 0px 0px;
@@ -80,17 +80,22 @@ menu li a:active {
     box-shadow: inset 0px 3px 3px hwb(209 27% 63%);
 }
 
-#intro { /* Page title spacing */
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 10px;
+.introTitle { /* Page title spacing */
+    color: #333;
+    margin-top: 5px;
+    margin-bottom: 14px;
+    padding: 20px;
     width: 650px;
     text-align: center;
 }
 
+p {
+    padding: 2px;
+}
+
 .intro { /* Text spacing */
-    margin-top: 10px;
-    margin-bottom: 10px;
+    color: #333;
+    margin: 5px 5px;
     padding: 10px;
     width: 650px;
     text-align: center;
@@ -102,7 +107,9 @@ menu li a:active {
     height: 500px;
     padding: 20px;
     /* aspect-ratio: 700 / 600; */
-    background-color: #586f6b;
+    border: 2px solid #130e14ba;
+    background-color: #332736ba;
+    border-radius: 10px;
 }
 
 iframe {
@@ -111,7 +118,7 @@ iframe {
 
 footer {
     overflow: hidden;
-    background-image: radial-gradient(circle,rgb(238, 226, 174) 0%, #332736ba 100%);
+    background-image: radial-gradient(circle,#f5f6fc85, #332736ba);
     width: 1870px; /* Specify width to stop the gradient from moving when resizing the window*/
     text-align: center;
 }
@@ -125,7 +132,7 @@ legend {
 form {
     width: 250px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 label {
@@ -157,13 +164,9 @@ textarea {
 #gameBoard {
   text-align: center;
   line-height: 0;
+  padding-top: 25px; /* Spacing of tiles on Y-axis of entire game board*/
 }
 
-.intro {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-style: italic;
-}
 /* .row {
   display: block;
 } */
@@ -192,7 +195,7 @@ button, .off { /* Default tile */
   aspect-ratio: cos(30deg);
   clip-path: polygon(-50% 50%,50% 100%,150% 50%,50% 0); */
   border:1px solid #001427;
-  background-color: #14213d;
+  background-color: #63389c;
   border-radius: 50px; /* Circle shape */
 }
 
