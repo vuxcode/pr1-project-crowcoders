@@ -137,3 +137,6 @@ For each Row of tiles (upper and lower cardinal directions, as well as the row w
 Also updated previous documentation and added more/new comments to try and explain the code better, both for myself and others.
 
 - (20 min. Both). Added the Program code to the Website file. Renamed the We1-Website.html to index.html. Any future changes will be seen in that file from now on. Added a div around the Randomize button to better control positioning. Fixed links as they broke when renaming the Website file. Also fixed them in the "mini-nav" as I had forgotten to do so until now. <br> Still need a logo.
+
+**Friday, 2025-05-16**
+- (1,5 hrs. Both). Adjusting various aspects of the website and program such as; colors, spacing of text, text content, win notif timer, documentation/comments. <br> Still need a logo, validate code (and write project summary & user instructions).
