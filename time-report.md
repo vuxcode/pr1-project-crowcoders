@@ -140,3 +140,5 @@ Also updated previous documentation and added more/new comments to try and expla
 
 **Friday, 2025-05-16**
 - (1,5 hrs. Both). Adjusting various aspects of the website and program such as; colors, spacing of text, text content, win notif timer, documentation/comments. <br> Still need a logo, validate code (and write project summary & user instructions).
+  
+  Attended the last workshop in school. Showed the working program and the website at its current state. Did a quick run-down on how some parts of the code for the program worked (ex. the win function, and the arrow function I used for the timeOut of the win notif). Spent the rest of the workshop fixing smaller things like spacing on the contact form. 
