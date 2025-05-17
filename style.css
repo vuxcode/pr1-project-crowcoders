@@ -12,6 +12,15 @@ header {
     background-image: radial-gradient(circle, #f5f6fc85 0%, #332736ba 100%);
 }
 
+.logo {
+    padding: 25px;
+}
+
+#logoStyle{
+    font-size: x-large;
+    font-weight: bold;
+}
+
 main {
     overflow: hidden;
     background-image: linear-gradient(to bottom, #f5f6fc85, #332736ba),
