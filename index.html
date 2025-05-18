@@ -54,33 +54,30 @@
               var iD = 1; // Variable to add unique IDs to the generated tiles. Starting at 1.
 
               // FIRST HALF. Note: row = rader, col ~tiles
-              /* One for-loop  to create 1st half, Starting at 4 & increasing to 7 tiles. */
-                for (var row = 1; row < 4; row++) {
-                  // COLIN: START A NEW ROW ARRAY HERE
+              /* One for-loop  to create 1st half, First 3 rows. */
+                for (var row = 1; row <= 3; row++) {
                   var arrayFirstHalf = [];
-                // COLIN: SPLIT THE HTML STRING INTO DIFFERENT PARTS AND ADD A VARIABLE TO COUNT THE TILE NUMBER!
-                for (var col = 1; col <= 3 + row; col++) {
-                    // COLIN: ADD THE CURRENT ID NUMBER TO THE CURRENT ROW ARRAY HERE
-                  arrayFirstHalf.push(iD);
-                  htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
-                // COLIN: THEN HERE YOU WANT TO UPDATE THE TILE VARIABLE IDENTIFYING NUMBER!
-                }
-                // COLIN: WHEN THE LOOP IS FINISHED FOR THE CURRENT ROW THEN ADD THE ROW ARRAY TO THE GAME AREA ARRAY
+                  
+                  for (var col = 1; col <= 3 + row; col++) {
+                    arrayFirstHalf.push(iD);
+                    htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`; // Use ${} to call upon an element in the string
+                  }
+                
                   gameArea.push(arrayFirstHalf);
-
                   htmlElements += `<br>`;
                 }
 
                 // SECOND HALF. Note: row = rader, col ~tiles
-                /* One for-loop to create the 2nd half, Decreasing from 6 down to 4 tiles */
-                for (var row = 1; row < 5; row++) {
+                /* One for-loop to create the 2nd half, Remaining 4 rows. */
+                for (var row = 1; row <= 4; row++) {
                   var arraySecondHalf = [];
+                  
                   for (var col = 1; col <= 8 - row; col++) {
                     arraySecondHalf.push(iD);
                     htmlElements += `<button onclick="changeClass(${iD})" id='tile`+ iD++ + `'>` + `</button>`;
                   }
-                  gameArea.push(arraySecondHalf);
 
+                  gameArea.push(arraySecondHalf);
                   htmlElements += `<br>`;
               }
 
@@ -138,11 +135,10 @@
               var tileLID = 0;
 
             // FUNCTION START
-              function changeClass(input) {
-                // Solving the edge case? Maybe if statement to check if there even Are tiles
+              function changeClass(input) { // Input = Waiting for the ID of the button, technically not waiting for User Input as in Click.
                 console.log("Clicked tile ID: " + input);
 
-                // Update var to store user input
+                // Update var to store ID of clicked Button
                 clickedTileID = input;
                 var tile = document.getElementById("tile" + input);
 
@@ -156,6 +152,7 @@
                 }
                 
               // Checks the array to find the position of the clicked tile in the gameArea array.
+              // Starts at 0 bcs Array. Runs if-statement for each. If the index exists, print & update var, exit.
                 for (var tileRowCounter = 0; tileRowCounter < gameArea.length; tileRowCounter++) {  
                   if (gameArea[tileRowCounter].indexOf(clickedTileID) > -1) {  
                       console.log("The clicked tile is on array row: " + tileRowCounter + " and column: " + gameArea[tileRowCounter].indexOf(clickedTileID));
@@ -177,21 +174,23 @@
               leftTile = colPos - 1;
               rightTile = colPos + 1;
 
-            // Updating the array index of the UPPERR INTERCARDINAL tiles, depending on if the row length is bigger or smaller than the row that contains the Clicked tile
-            if (gameArea[rowAbove]) {
+            // Updating the array index of the UPPER INTERCARDINAL tiles, Math changes depending on if the row length of ROW ABOVE is bigger or smaller than the row that contains the Clicked tile
+            // If statement contains both the math and CSS class flip
+            if (gameArea[rowAbove]) { // Checks if rowAbove exists
 
-              if (gameArea[rowAbove] && gameArea[clickedRow].length > gameArea[rowAbove].length) {
+              if (gameArea[clickedRow].length > gameArea[rowAbove].length) { // Compare length of clicked row w/ the length of the rowAbove
                   adjecentUpLeft = colPos - 1;
                   adjecentUpRight = colPos;
 
-              } else if (gameArea[rowAbove] && gameArea[clickedRow].length < gameArea[rowAbove].length) {
+              } else if (gameArea[clickedRow].length < gameArea[rowAbove].length) {
                   adjecentUpLeft = colPos;
                   adjecentUpRight = colPos + 1;
               }
-              topRID = gameArea[rowAbove][adjecentUpRight];
+              topRID = gameArea[rowAbove][adjecentUpRight]; // Stores button ID that was contained in Array Index in var
               topLID = gameArea[rowAbove][adjecentUpLeft];
               
-              if (gameArea[rowAbove][adjecentUpRight]) { // Checks if UpRight tile exists
+              // Checks if UpRight tile exists
+              if (gameArea[rowAbove][adjecentUpRight]) { 
               // Uses the ID that was called and stored above to .getElementById for the Top Right tile, then runs If else to flip the class
                 var tileTopR = document.getElementById("tile" + topRID);
 
@@ -205,7 +204,8 @@
                 }
               }
 
-              if (gameArea[rowAbove][adjecentUpLeft]) { // Checks if UpLeft tile exists
+              // Checks if UpLeft tile exists
+              if (gameArea[rowAbove][adjecentUpLeft]) { 
               // Uses the ID that was called and stored above to .getElementById for the Top Left tile, then runs If else to flip the class
                 var tileTopL = document.getElementById("tile" + topLID);
 
@@ -220,19 +220,21 @@
               }
               } 
             
-            // Updating the array index of the LOWER INTERCARDINAL tiles, depending on if the row length is bigger or smaller than the row that contains the Clicked tile
-              if (gameArea[rowBelow]) { // Checking if rowBelow Exists
-                if (gameArea[rowBelow] && gameArea[clickedRow].length > gameArea[rowBelow].length) {
+            // Updating the array index of the LOWER INTERCARDINAL tiles, Math changes depending on if the row length of ROW BELOW is bigger or smaller than the row that contains the Clicked tile
+              // Checking if rowBelow Exists
+            if (gameArea[rowBelow]) { 
+                if (gameArea[clickedRow].length > gameArea[rowBelow].length) {
                   adjecentDownLeft = colPos - 1;
                   adjecentDownRight = colPos;
-                } else if (gameArea[rowBelow] && gameArea[clickedRow].length < gameArea[rowBelow].length) {
+                } else if (gameArea[clickedRow].length < gameArea[rowBelow].length) {
                   adjecentDownLeft = colPos;
                   adjecentDownRight = colPos + 1;
                 }
                 bottomRID = gameArea[rowBelow][adjecentDownRight];
                 bottomLID = gameArea[rowBelow][adjecentDownLeft];
 
-                if (gameArea[rowBelow][adjecentDownRight]) { // Checks if DownRight tile exists
+                // Checks if DownRight tile exists
+                if (gameArea[rowBelow][adjecentDownRight]) { 
               // Uses the ID that was called and stored above to .getElementById for the Bottom Right tile, then runs If else to flip the class
                 var tileBottomR = document.getElementById("tile" + bottomRID);
               // If/else to flip class of tile Bottom Right
@@ -245,9 +247,8 @@
                 }
               }
 
-
-            // Checking the CARDINAL tiles
-                if (gameArea[rowBelow][adjecentDownLeft]) { // Checks if DownLeft tile exists
+            // Checks if DownLeft tile exists
+                if (gameArea[rowBelow][adjecentDownLeft]) { 
               // Uses the ID that was called and stored above to .getElementById for the Bottom Left, then runs If else to flip the class
                 var tileBottomL = document.getElementById("tile" + bottomLID);
                 // If/else to flip class of tile Bottom Left
@@ -260,8 +261,10 @@
                 }
               }
             }  
-              
-            if (gameArea[clickedRow][rightTile]) { // Checks if Right tile exists
+
+          // Checking the CARDINAL tiles
+            // Checks if Right tile exists
+            if (gameArea[clickedRow][rightTile]) { 
               tileRID = gameArea[clickedRow][rightTile]; // If exist, grab index ID, store in var
               var tileR = document.getElementById("tile" + tileRID);
             // If/else to flip class of tile Right
@@ -274,7 +277,8 @@
               }
             }
 
-            if (gameArea[clickedRow][leftTile]) { // Checks if Left tile exists
+            // Checks if Left tile exists
+            if (gameArea[clickedRow][leftTile]) { 
               tileLID = gameArea[clickedRow][leftTile];
               var tileL = document.getElementById("tile" + tileLID);
             // If/else to flip class of tile Left
@@ -287,7 +291,9 @@
               }
             }  
             if (checkWin()) {
-              setTimeout(() => {alert("✨Congratulations, You Won!✨");}, 250); // Using arrow function to allow for simplified function syntax. Good for when only One task should be executed.
+              setTimeout(() => {alert("✨Congratulations, You Won!✨");}, 250); 
+              // Using a timeout to let the visual assets update, so the win notif doesnt appear too quickly if the board hasn't changed tiles yet.
+              // Using arrow function to allow for simplified function syntax. Good for when only One task should be executed.
             }  
           } // THE changeClass() ENDS HERE
             </script>
@@ -306,9 +312,9 @@
     <div class="intro">
       <h1>How to play:</h1>
       <p>The goal of the game is to make all the tiles display the same color, gold or violet.</p>
-      <p>Sounds simple enough, but for every tile you click, the adjecent tiles will shift as well!</p>
+      <p>Sounds simple enough, but once you've clicked a tile, the adjecent tiles will shift too!</p>
       <p>To win, turn all the tiles either golden OR violet.</p>
-      <p>Use the Shuffle Board button to generate a new board. This button can also be used to play again when you've won.</p>
+      <p>Use the Shuffle Board button to generate a new board. This button can also be used to play again once you've won.</p>
             
     </div>
 

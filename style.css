@@ -193,11 +193,8 @@ textarea {
 }
 
 /* CSS for the color change */
-  button, .on {
-  display: inline-block;
-  width: 50px;
-  height: 50px; /* adjust to control the size */
-  border:1px solid #ffc757;
+button, .on {
+  border: 2px solid #ffc757;
   background-color: #fca311;
 }
       
@@ -205,13 +202,14 @@ button, .off { /* Default tile */
   display: inline-block;
   width: 50px;
   height: 50px; /* adjust to control the size */
-  border:1px solid #001427;
+  border: 2px solid #001427;
   background-color: #63389c;
   border-radius: 50px; /* Circle shape */
+  margin: 0px 2px; /**/
 }
 
 button:hover{ /* Hover effect for the game tiles */
-border: 1px solid #e5e5e5;
+border: 2px solid #e5e5e5;
 }
 
 /* Misc Buttons/Controlls */
