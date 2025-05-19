@@ -94,8 +94,8 @@
 
             <script> // Generating starting board
               function randomizeTiles() {
-                for(var i=0; i < row*col; i++)
-                  changeClass(Math.floor(Math.random()*row*col)); // Randomly getting errors in console. Might need to define min-max nr? Tho I feel like row*col should do that already?
+                for(var i=0; i < document.querySelectorAll("button[id^=tile]").length; i++)
+                  changeClass(Math.floor(Math.random() * document.querySelectorAll("button[id^=tile]").length) + 1); // Randomizes all tiles, min: 1 max: total tiles(37).
             }
             </script>
 
