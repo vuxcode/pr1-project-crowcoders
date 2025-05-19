@@ -145,3 +145,9 @@ Also updated previous documentation and added more/new comments to try and expla
 
 **Saturday, 2025-05-17**
 - (1 hr). Tinkering with structure, fixing a basic text-based logo and making sure clicking it links to the index.html from all pages. Fixed some visual bugs on the header and footer, as well as on the additional pages (moved the html around as I forgot I had done so on the index.html). Noticed slight symmetry issues but I'll see if I can fix that before the final deadline.
+
+**Sunday, 2025-05-18**
+- (2,5 hrs). 90% of the time was spent writing the Project Summary/Report. The remaining time I expanded upon the code documentation (edited existing comments, added more comments for clarity).
+
+**Monday, 2025-05-19**
+- (10 min). Changed the randomize function from "row*col" to "document.querySelectorAll("button[id^=tile]").length". This prevents the code from generating "0" as a value (which doesn't randomize anything...) This new code also allows the bottom row to randomize, as the previous code excluded that row (the numbers never reached 37 for some reason?) This also fixed the RNG-based error message that would appear in the console.
