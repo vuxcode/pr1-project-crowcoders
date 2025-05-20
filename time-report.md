@@ -157,10 +157,10 @@ Attended the first round of presentations in school. Presented my program, in a 
 
 **Tuesday, 2025-05-20**
 - (1 hr). Edited some comments in the code for the game, mainly just wording. For the website, I managed to fix the centering issue by changing the CSS used on the nav, article and main elements. Centered the text-logo and made it bigger to better convey it's position as a "main" element. Validated all the HTML files (and the CSS file), and had no bigger issues. Removed an extra closing tag, but other than that, nothing else needed to be fixed. The validator didn't like my usage of frameborder in the iframe (on the about page), but I opted to ignore that and keep my code as is, since the code from the course also included frameborders, and it does not impact the usability of the website. Also connected the form on the contact page and tested it and confirmed that it's working as intended (sent myself a message through the form and it arrived). <br>
-Left to do:
-- Finish visual guide images/text for the readme.
-- Publish website to own GitHub repo to get sharable link.
-- Finish report.
-- Tally work hours.
+Left to do:<br>
+» Finish visual guide images/text for the readme.<br>
+» Publish website to own GitHub repo to get sharable link.<br>
+» Finish report.<br>
+» Tally work hours.<br>
 
 - (1,5 hrs). Finished visual guide (taking screenshots, editing screenshots, editing guide text). Tallied the hours worked.
