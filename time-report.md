@@ -39,7 +39,7 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 ## Week 16 (Week 3 in the Project Timeline)
 **Tuesday, 2025-04-15**
 - (~2,5 hrs. Programming). Still trying to figure out how to generate the game board. Followed some online examples of generating a rhombus and then editing that code to try and make a hexagonal shape. Managed to get a more concrete way to structure the code (how I should think about it). Just have to actually make the steps work :]
-- (~1,5 hrs. Programming). Took me 84 years, but got the game board shape I wanted (hexagon). Other problems arose that I will look into at in the future, mainly spacing and aesthetics.
+- (~1,5 hrs. Programming). Took me 84 years, but got the game board shape I wanted (hexagon). Other problems arose that I will look into in the future, mainly spacing and aesthetics.
 
 **Wednesday, 2025-04-16**
 - (~15 min. Webdev). Added placeholder buttons and code for future logo & favicon.
@@ -52,13 +52,14 @@ Week summary: Became ill, and did not spend any major time on the Final Project.
 **Wednesday, 2025-04-23**
 - (5 min. Webdev). Fixed the dummy text layout (it was a simple div-width issue but my brain wasn't braining yesterday).
 - (1 hr. Programming). Researched some code, realized I'm trying to use syntax (ex. $())from JS libraries and not "pure" JS. Explains why things don't work as expected. (2 min later:) NVM it can also be used as a shortcut for a document function in JS.
- Tried using the < button > element instead of < div id= "tile" >, ended up with a cryptid. (Literary 10 min later: Managed to fix the cryptid). Also tried modifying the function() that is intended to control interactivity, but didn't get very far with that since 
+ Tried using the < button > element instead of < div id= "tile" >, ended up with a cryptid.   (Literary 10 min later: Managed to fix the cryptid). Also tried modifying the function() that is intended to control interactivity, but didn't get very far with that since 
  I need to have the elements/names sorted before I can define the syntax for the function(). Experimented with some functions. Trying to untangle different syntaxes.
 
 ## Week 17 (Week 5 in the Project Timeline)
 **Monday, 2025-04-28**
 
  Attended workshop in school. Got some help untangling the functions-mess (adviced to use onclick). Also got some more information regarding some Properties (.classList) I was thinking of using to control the CSS. Showed the current website as well. 
+ 
 - (1,5 hrs? Programming). Fighting my demons aka for-loops. Got the iDs to print correctly. Due to unfortunate "´'-usage I first accidently printed the number IDs onto the buttons as well, but after some careful editing, I got the proper result. It is now possible to use the console to find individual tiles. Also added the 'onclick=""' - function to the printed string/buttons. Next step is to write the function to control the CSS.
 
 **Tuesday, 2025-04-29**
@@ -82,7 +83,7 @@ Attended workshop in school. Got help with fixing some syntax issues (using ${ }
 Note: Have not uploaded the separate pages to gitHub yet.
 
 **Wednesday, 2025-05-07**
-- (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is how to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :). (EDIT 13/5: Changed the tile shape from squares/hexagons to circles. The design is still very basic, but circles are shaped like freinds and I fel thtey fit better together compared to the squares. Not sure if I'll have time to tinker more with the intended hexagonal shape before the project deadline).
+- (30 min. Both, but mostly programming). Read through course notes and doing research for various functions for the game, found some example code to ask about during todays workshop. The big issue currently is how to make all adjecent tiles switch when x-tile is clicked. As well as how to define a winning state & declare victory to the user. In theory I think I know how I want to do it, it's just a matter of doing (and understanding what I'm doing :). (EDIT 13/5: Changed the tile shape from squares/hexagons to circles. The design is still very basic, but circles are shaped like friends and I feel that they fit better together compared to the squares. Not sure if I'll have time to tinker more with the intended hexagonal shape before the project deadline.
   
 Attended workshop in school. Received help with connecting the code more to an "actual program" as opposed to just having everything be "displayed on-screen". Stored the different rows of game tiles in arrays. Storing the data should help me define what tiles change when clicked as well as defining winning states. Also changed the tile shape from squares to circles because circles are nice and (imo) looks a bit more polished, and it gives less of the "default Blender cube" - vibe.
 
@@ -93,7 +94,7 @@ Attended workshop in school. Received help with connecting the code more to an "
 - (45min? Programming). Trying to untangle my code and creating the groundwork for expanding on the changing of CSS, but I've somehow forgotten why am I'm using things (such as input). Confused about numbers in the console, I thought they made sense but now they don't? When tiles are randomized, they don't correlate to either the tileID or the array index(?).
 - (5 min. Webdev). Fixed the directory issue witht the pages. The directory issue was using /pages when it wasn't needed as the about/contact page are in the same diretory.
   
-Attended workshop in school. Did some mock-code on my own, trying to break down the process into steps. Got help testing the array I made, and it's working as inteded (using .length & .indexof). Created a var that holds the user-clicked tile so it can be acess and confirmed in the console (clickedTile). Next step is to create a var (input) that holds the clicked tile and *vague hand gestures* loop through the array.
+Attended workshop in school. Did some mock-code on my own, trying to break down the process into steps. Got help testing the array I made, and it's working as inteded (using .length & .indexof). Created a var that holds the user-clicked tile so it can be acessed and confirmed in the console (clickedTile). Next step is to create a var (input) that holds the clicked tile and *vague hand gestures* loop through the array.
 
 **Friday, 2025-05-08**
 - (1,5 hrs. Programming). Tried various combinations of array/for-loops, did not really succeed, but at least I tried.
@@ -130,7 +131,7 @@ Attended workshop in school. Got some help with cleaning up the syntax. Still ne
 - (2,5 hrs. Programming). Added a bunch of variables and updated them to hold the array indexes of clicked tile, the adjecent directional tiles and then stored the ID in those Indexes in more vars. Used those vars to create if/else statements to change the surroundintg tiles. TL;DR: Using array index IDs as a basis for the math (instead of the Button IDs).<br>
  So that works now, the tiles do flip as intended, but edges aren't working. Potential solution (?): adding an invisible array of tiles arround the visible game area?
 
-Attended workshop in school. Got help refining the code structure further and solving the edge tiles not working by using an absurd amount of if/else statements. My partner attended as well as emotional support and helped me throw things against the wall to see what stuck.
+Attended workshop in school. Got help refining the code structure further and solving the edge tiles not working by using an absurd amount of if/else statements. My partner attended as emotional support and helped me throw things against the wall to see what stuck.
 
 - (2 hrs? Programming). Finished up the if/else structuring that was started at the workshop: <br>
 For each Row of tiles (upper and lower cardinal directions, as well as the row where the user-clicked tile is located), there is an if/else statement that checks that the row and tile exists. If they exist, depending on if the row is longer or shoter than the clicked row, then different math applies to find the correct index of the adjacent tiles. <br>
@@ -159,3 +160,5 @@ Attended the first round of presentations in school. Presented my program, in a 
 Left to do:
 - Finish visual guide images/text for the readme.
 - Publish website to own GitHub repo to get sharable link.
+- Finish report.
+- Tally work hours.
