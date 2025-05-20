@@ -33,7 +33,11 @@ Pure programming wise, the main improvement I can think of would be optimizing t
 
 > A conclusion on the budget. Did you manage to stick to the budget? Why? / Why not? <br>
 
-- Tally the hours.
+Webdev hours worked: ~28 hrs. (1,725 min = 28,7 hrs).
+Programming hours worked: ~45 hrs. ( 2,805 min = 46.7 hrs).
+
+When looking at the hours above, they are more or less what I expected. <br>
+(WIP)
 
 # User Guide
 
