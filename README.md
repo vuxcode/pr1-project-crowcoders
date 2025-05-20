@@ -42,10 +42,54 @@ Pure programming wise, the main improvement I can think of would be optimizing t
 The main page of the website hosts the game *Lights Low*. Below the game area, the user can find the basic instructions for the game and what the "Shuffle Board" - button does. The About page displays some information about the creator of the webpage and programmer behind the game (me). It also thanks the user for visitng and gives them a virtual egg. The Contact page exists in case the user wishes to contact the creator of the website (again, me) for any reason. The form provided only collects the most basic info in order to comply with data protection laws (GDPR).
 
 **How to Play Lights Low** <br>
-*Lights Low* is a puzzle game where the goal is to turn all the tiles the same color. Turning all tiles to either Gold or Violet will win the game and display a pop-up win notification. Sounds simple enough. However, when the user clicks a tile, all the adjecent tiles (intercardinal, as well as the tile(s) directly left and right of the clicked tile), will shift to the opposite color. The tile-colors will be randomized when the player first loads the page, and they may freely choose to re-shuffle the tiles should they wish to, by using the "Shuffle Board"-button. This button is used kind of like a "restart" button as well. When the user has won the game, they will need to click the "Shuffle Board"-button to generate a new board / play again. 
+*Lights Low* is a puzzle game where the goal is to turn all the tiles the same color. Turning all tiles to either Gold or Violet will win the game and display a pop-up win notification. Sounds simple enough. However, when the user clicks a tile, all the adjecent tiles (intercardinal, as well as the tile(s) directly left and right of the clicked tile), will shift to the opposite color. The tile-colors will be randomized when the player first loads the page, and they may freely choose to re-shuffle the tiles should they wish to, by using the "Shuffle Board"-button. This button is used kind of like a "restart" button as well. When the user has won the game, they will need to click the "Shuffle Board"-button to generate a new board / play again. <br> 
 
 For solutions to the game, see the visual guide below:
 
- - Insert images
+**IMPORTANT**
+Always start clearing tiles from the TOP ROW, then go one row down and repeat the process. Sometimes the order of which you click won't matter.
 
+**Step 1:** <br>
+Choose which color you want to win. <br>
+In the example below, we have picked violet. <br>
+To clear the tiles, you'll always be clicking the tiles *one row Below*. See the first image for a simplified visual. <br>
+If you click an edge tile, you will change color of one tile of the top row. <br>
+If you click a middle tile, two tiles will change colors. <br>
+Repeat this principle until you reach the 4th row.<br>
+<img src="https://github.com/user-attachments/assets/bf8e1baa-f631-4169-a273-046fa21401b8" width=75%>
+
+**Step 2:** <br>
+We are now clearing Row 4. <br>
+If your 4th row has an Even amount of tiles of your chosen color (in our case, violet), you can clear them and skin this step. <br>
+If you have an uneven amount of tiles to clear out, click the tiles in the order shown below, from left to right to clear the 4th row. <br>
+- Click all the tiles in the middle (4th row). <br>
+<img src="https://github.com/user-attachments/assets/3b9b652f-8a83-40c5-98ee-8f0bc173ab5d" width=75%>
+
+**Step 3:** <br>
+We are now clearing Row 5. <br>
+If you have an Even amount of tiles of your chosen color, you can clear them as done before. <br>
+If you have an uneven amount remaining tiles to remove, click the tiles in the order shown below to clear the row. <br>
+- Row 1 - click the second tile;
+- Row 2 - click 2nd, 4th and 5th tiles;
+- Row 3 - click 2nd, and 3rd tile;
+- Row 4 - click 2nd, 4th, 5th, 6th tiles;
+- Row 5 - click 1st, 2nd, 3rd, 5th and 6th tiles.
+
+<img src="https://github.com/user-attachments/assets/f5723be8-fb5b-48bd-be11-72719b8658fe" width=75%>
+
+
+**Step 4:** <br>
+We are now clearing Row 6. <br>
+Like in the previous steps, if you have an even amount of tiles in your chosen color, you can win the game at this stage. <br>
+Otherwise, click the order shown below to clear the board and win the game. <br>
+- Row 1 - click the 3rd tile;
+- Row 2 - click 3rd and 5th tiles;
+- Row 3 - click 3rd, 4th and 6th tiles;
+- Row 4 - click 3rd and 5th tiles;
+- Row 5 - click 2nd, 3rd, 4th, 5th and 6th tiles.
+<img src="https://github.com/user-attachments/assets/4ce5e45e-1002-4150-9144-e055555b6ecb" width=75%>
+
+**Step 5:** <br>
+***Congratulations, Board Cleared!*** <br>
+<img src="https://github.com/user-attachments/assets/c0f87acb-a153-4018-ba96-718711bba5b0" width=75%>
 
