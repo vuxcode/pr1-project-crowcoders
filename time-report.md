@@ -162,3 +162,5 @@ Left to do:
 - Publish website to own GitHub repo to get sharable link.
 - Finish report.
 - Tally work hours.
+
+- (1,5 hrs). Finished visual guide (taking screenshots, editing screenshots, editing guide text). Tallied the hours worked.
