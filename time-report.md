@@ -151,3 +151,11 @@ Also updated previous documentation and added more/new comments to try and expla
 
 **Monday, 2025-05-19**
 - (10 min). Changed the randomize function from "row*col" to "document.querySelectorAll("button[id^=tile]").length". This prevents the code from generating "0" as a value (which doesn't randomize anything...) This new code also allows the bottom row to randomize, as the previous code excluded that row (the numbers never reached 37 for some reason?) This also fixed the RNG-based error message that would appear in the console.
+
+Attended the first round of presentations in school. Presented my program, in a slightly messy way mostly due to nerves. Will present the webpage at a later opportunity.
+
+**Tuesday, 2025-05-20**
+- (1 hr). Edited some comments in the code for the game, mainly just wording. For the website, I managed to fix the centering issue by changing the CSS used on the nav, article and main elements. Centered the text-logo and made it bigger to better convey it's position as a "main" element. Validated all the HTML files (and the CSS file), and had no bigger issues. Removed an extra closing tag, but other than that, nothing else needed to be fixed. The validator didn't like my usage of frameborder in the iframe (on the about page), but I opted to ignore that and keep my code as is, since the code from the course also included frameborders, and it does not impact the usability of the website. Also connected the form on the contact page and tested it and confirmed that it's working as intended (sent myself a message through the form and it arrived). <br>
+Left to do:
+- Finish visual guide images/text for the readme.
+- Publish website to own GitHub repo to get sharable link.
