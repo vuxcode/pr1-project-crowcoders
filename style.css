@@ -6,20 +6,6 @@
 
     font-family: 'Quicksand'/* <--- Custom font name */, Verdana, Geneva, Tahoma, sans-serif;
 }
-header {
-    height: 100px;
-    width: 100%; /* Specify width to stop the gradient from moving when resizing the window*/
-    background-image: radial-gradient(circle, #f5f6fc85 0%, #332736ba 100%);
-}
-
-.logo {
-    padding: 25px;
-}
-
-#logoStyle{
-    font-size: x-large;
-    font-weight: bold;
-}
 
 main {
     overflow: hidden;
@@ -28,11 +14,27 @@ main {
     background-size: auto;
 }
 
-/* Defining Main Page size */
+header {
+    height: 100px;
+    width: 100%; /* Specify width to stop the gradient from moving when resizing the window*/
+    background-image: radial-gradient(circle, #f5f6fc85 0%, #332736ba 100%);
+}
+
+.logo {
+    padding: 25px;
+    text-align: center;
+}
+
+#logoStyle{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/* Defining nav+article width */
 .page {
-    width: 950px;
+    width: 1100px; /* If adjust, adjust article width accordingly*/
     margin: 0 auto;
-    background-color:bisque;
+    
 }
 nav {
     float: left;
@@ -42,6 +44,7 @@ nav {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     margin: 20px 0px 0px 0px;
+
 }
 
 a {
@@ -49,8 +52,8 @@ a {
 }
 
 article { /* Game "container"*/
-    float: left;
-    width: 750;
+    /* float: left; */
+    width: 700px;
     min-height: 900px; 
     padding: 10px;
     background-color: bisque;
@@ -58,6 +61,7 @@ article { /* Game "container"*/
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: inline-block;
 }
 
 a {
@@ -95,7 +99,7 @@ menu li a:active {
 
 .introTitle { /* Page title spacing */
     color: #333;
-    margin-top: 5px;
+    margin: 0 auto;
     margin-bottom: 14px;
     padding: 20px;
     width: 650px;
@@ -108,7 +112,7 @@ p { /* Paragraph, line spaceing */
 
 .intro { /* Text spacing */
     color: #333;
-    margin: 5px 5px;
+    margin: 0 auto;
     padding: 10px;
     width: 650px;
     text-align: center;
@@ -172,6 +176,8 @@ textarea {
     margin-left: 18px;
     color: #18191b;
 }
+
+
 
 
 /* CSS for the Game Assets*/

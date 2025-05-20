@@ -15,7 +15,7 @@
     </style>
   </head>
 
-  <body  onload="randomizeTiles()"> <!-- Generating Game assets NOTE: use onload=function() to have the tiles generate when page is loaded-->
+  <body  onload="randomizeTiles()"> <!-- Generating Game assets using onload=function() to have the tiles generate when page is first loaded-->
     
 
     <main> 
@@ -30,7 +30,8 @@
       
       <div class="page"> 
       <!-- Navigation menu -->
-        <nav> <!--"Left column"-->
+       <!--"Left column"-->
+        <nav> 
           <menu>
             <li><a href="index.html">Home</a></li>
             <li><a href="./pages/about.html">About</a></li>
@@ -38,14 +39,15 @@
           </menu>
         </nav>
         
-        <!-- Main column. Program/Game area -->
+        <!-- Main column. Game area -->
         <article> 
           <!-- <div class="miniNav"><a href="index.html">Home</a></div> -->
           <div class="introTitle">
             <h1>Lights Low</h1>
           </div>
           <div class="gameBoard">
-          <!---CODE FOR GAME GOES HERE-->
+
+          <!---CODE FOR GAME STARTS HERE-->
           <div id="gameBoard">
             <script>
                 
@@ -91,6 +93,8 @@
             <div class="buttons">
               <button id="Randomize" onclick="randomizeTiles()">Shuffle Board</button> <!-- Creating a control for the user to manually randomize a board. -->
             </div>
+
+           <!-- FUTURE TASK: Add HTML elements for user data (clicks, timer) here -->
 
             <script> // Generating starting board
               function randomizeTiles() {
@@ -152,7 +156,7 @@
                 }
                 
               // Checks the array to find the position of the clicked tile in the gameArea array.
-              // Starts at 0 bcs Array. Runs if-statement for each. If the index exists, print & update var, exit.
+              // Starts at 0 bcs Array. Runs if-statement for each index. If the index exists, print & update var, exit.
                 for (var tileRowCounter = 0; tileRowCounter < gameArea.length; tileRowCounter++) {  
                   if (gameArea[tileRowCounter].indexOf(clickedTileID) > -1) {  
                       console.log("The clicked tile is on array row: " + tileRowCounter + " and column: " + gameArea[tileRowCounter].indexOf(clickedTileID));
@@ -189,7 +193,7 @@
               topRID = gameArea[rowAbove][adjecentUpRight]; // Stores button ID that was contained in Array Index in var
               topLID = gameArea[rowAbove][adjecentUpLeft];
               
-              // Checks if UpRight tile exists
+              // Checks if Upper Right tile exists
               if (gameArea[rowAbove][adjecentUpRight]) { 
               // Uses the ID that was called and stored above to .getElementById for the Top Right tile, then runs If else to flip the class
                 var tileTopR = document.getElementById("tile" + topRID);
@@ -204,7 +208,7 @@
                 }
               }
 
-              // Checks if UpLeft tile exists
+              // Checks if Upper Left tile exists
               if (gameArea[rowAbove][adjecentUpLeft]) { 
               // Uses the ID that was called and stored above to .getElementById for the Top Left tile, then runs If else to flip the class
                 var tileTopL = document.getElementById("tile" + topLID);
@@ -314,8 +318,7 @@
       <p>The goal of the game is to make all the tiles display the same color, gold or violet.</p>
       <p>Sounds simple enough, but once you've clicked a tile, the adjecent tiles will shift too!</p>
       <p>To win, turn all the tiles either golden OR violet.</p>
-      <p>Use the Shuffle Board button to generate a new board. This button can also be used to play again once you've won.</p>
-            
+      <p>Use the Shuffle Board button to generate a new board. This button can also be used to play again once you've won.</p>     
     </div>
 
         </article>
