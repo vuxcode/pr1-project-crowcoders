@@ -13,7 +13,7 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 This project conists of two parts: A Website and a Game. The website is mainy used as a way to "host" the game. The game is based on the game *Glimmer & Gloom* that's featured on the site Flight Rising. This game is in turn inspired by the game *Lights Out* (1995). A more accurate description might be that my game (*Lights Low*) aims to replicate *Glimmer & Gloom*, since the gameplay is more or less the same. 
 
-> A reflection of the experiences you had while creating the project <br>
+## A reflection of the experiences you had while creating the project <br>
 
 My programming experience prior to these courses was quite limited. I had done some self studying through sites like Codecademy, W3 Schools and Freecodecamp etc. Thanks to the self-studying I was aware of common programming terms and how to do basic things like declaring variables, combining strings and creating arrays. Editing HTML codes for blog sites such as Tumblr, Wordpress and other random sites as a kid, meant I was familiar with basic HTML terms such as tags, elements, attributes, etc. But I had never really built my own website, let alone a Program. 
 
@@ -23,21 +23,30 @@ I considered switching to making another type of game (like tic-tac-toe) that at
 
 It was frustrating at times, because I am not a patient person and when I don't see progress, I tend to want to give up. I knew the end goal was never to actually have a Finished Product, but I wanted to make this work. Through preservation, stupid amounts of Googling, good support from the teacher during the workshops, and math assitance from my partner, I did manage to have a playable program in the end! I am proud of the final outcome, even if there surely are a lot of things to be improved upon. But for someone with virtually zero programming experience prior to this, this was an interesting journey. 
 
-> What could be improved in the project if you had more time? <br>
+## What could be improved in the project if you had more time? <br>
 
-If one is familiar with the original *Glimmer & Gloom*, the game is about helping one of the factions (either Light or Shadow), gain more territory by converting the tiles to their respective element/color. The game board is accompanied by creatures from both factions reacting to the amount of tiles of their respective colors as the game progresses. The original *Lights Out* also has a theme, turning the "lights" off.
+Pure programming wise, the main improvement I can think of would be optimizing the if/else statements that control the interactivity/changing of the CSS classes. The current code works just fine, but I'm sure there are more efficient ways to go about creating something like this. The way it's structured currently makes sense to someone of my programming level, but when researching other peoples example of creating *Lights Out* games, their code has been much shorter. This is of course due to many different factors, such as some people were using libraries such as React or jQuery, as well as they were programming with a more classic grid-pattern that had an equal amount of tiles, instead of a hexagonal shape that has an uneven amount of tiles 🤡. 
 
-For my website and game, I would have liked to create some kind of "lore" to the game. Whilst *Lights Low* somewhat combines thematic aspects of the two aforementioned games, I feel like there could have been more ways to make this clear to the user or make it into more of its own thing. This could've been done by having more detailed visual assets, such as a more themed logo or background image(s) or some sort of game mascot. Another example would've been to have more written lore on the About page. I would also have liked to have a moves-counter that displayed how many times the user has clicked, as well as a traditional timer to let the user know how long it took for them to solve the board (these features exist in the original *Glimmer & Gloom*).
+~~Another thing to improve would be the randomize function, as it currently can generate some unwanted combinations (like all tiles are purple except a cluster of 6, which requires 1 click to win...)~~ <br>
+(***NOTE: This has been improved by more clearly defining the math used in the randomize-function. The likelyhood of a "bad" board being generated is very small***)
+
+As for non-programming imporvements; if one is familiar with the original *Glimmer & Gloom*, the game is about helping one of the factions (either Light or Shadow), gain more territory by converting the tiles to their respective element/color. The game board is accompanied by creatures from both factions reacting to the amount of tiles of their respective colors as the game progresses. The original *Lights Out* also has a theme, turning the "lights" off.
+
+For my website and game, I would have liked to create some kind of "lore" to the game. Whilst *Lights Low* somewhat combines thematic aspects of the two aforementioned games, I feel like there could have been more ways to make this clear to the user or make it into more of its own thing. This could've been done by having more detailed visual assets, such as a more themed logo or background image(s) or some sort of game mascot. Another example would've been to have more written lore on the About page. I would also have liked to have a moves-counter that displayed how many times the user has clicked, as well as a traditional timer to let the user know how long it took for them to solve the board (these features exist in the original *Glimmer & Gloom*). Maybe I will return to add these after the course or if I ever attempt to re-write the code.
   
-Pure programming wise, the main improvement I can think of would be optimizing the if/else statements that control the interactivity/changing of the CSS classes. The current code works just fine, but I'm sure there are more efficient ways to go about creating something like this. The way it's structured currently makes sense to someone of my programming level, but when researching other peoples example of creating *Lights Out* games, their code has been much shorter. This is of course due to many different factors, such as some people were using libraries such as React or jQuery, as well as they were programming with a more classic grid-pattern that had an equal amount of tiles, instead of a hexagonal shape that has an uneven amount of tiles 🤡. Another thing to improve would be the randomize function, as it currently can generate some unwanted combinations (like all tiles are purple except a cluster of 6, which requires 1 click to win...)
+## A conclusion on the budget. Did you manage to stick to the budget? Why? / Why not? <br>
 
-> A conclusion on the budget. Did you manage to stick to the budget? Why? / Why not? <br>
-
-Webdev hours worked: ~28 hrs. (1,725 min = 28,7 hrs).
-Programming hours worked: ~45 hrs. ( 2,805 min = 46.7 hrs).
+**Webdev hours worked:** ~28 hrs. (1,725 min = 28,7 hrs). <br>
+**Programming hours worked:** ~45 hrs. ( 2,805 min = 46.7 hrs).
 
 When looking at the hours above, they are more or less what I expected. <br>
-(WIP)
+I am more of a visual learner, so the different concepts in HTML and CSS were easier to learn for me. Also, since I already had some experience with HTML, I had a more solid foundation to stand e.g. what terms to use when researching on my own. I also understood the information I came across (both online and on the course), faster.
+
+With programming, I had to spend more time making sure I understood things "from the start", in order to make sure I could reliably utilize them in my own project. Researching and testing out the different concepts I came across also took up a large chunk of time. We were taught to work in small steps and test at each of these steps. This workflow made sense to me, but since I have less programming experience, it was also another source of frustration at times. 
+
+When a problem arose, I had to first identify the problem, which often wasn't too difficult, but finding a suitable solution could be a challenge. When searching for help online and looking at pages such as Stackoverflow, the solutions were (as expected) very tailored to one specific scenario. Having to dissect (and again, try out and experiment), with various conecpts that more often than not turned out to be dead ends for my specific project, was a bit like chewing sand.
+
+The workshops where I could ask a more experienced programmer (the teacher) for advice and guidence were much appreciated and without them, this project would probably have taken another 50 hrs. Of course, there are a million different ways to program the same features and I'm sure that someone with more experience than me would've structured the whole project differently and been more efficient from the start. But again, this was a course to learn and learn I did. I programmed the game in steps that made sense to me, and I'm happy with the final result (and the fact that I even managed to have a finished product at all).
 
 # User Guide
 
