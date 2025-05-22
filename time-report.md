@@ -163,4 +163,7 @@ Left to do:<br>
 » Finish report.<br>
 » Tally work hours.<br>
 
-- (1,5 hrs). Finished visual guide (taking screenshots, editing screenshots, editing guide text). Tallied the hours worked.
+- (1,5 hrs). Finished visual guide (taking screenshots, editing screenshots, editing guide text). Tallied the hours worked. Any time logged in the time report now are mostly dedicated to "post-project" tasks, like writing the report. I'v decided not to include that time in the Hours Worked, as they don't directly contribute to the program/website.
+
+**Thursday, 2025-05-22**
+- (1 hr). Adjusted min-height on the website. Added some semantics to the website html. Finished up the Project Report.
