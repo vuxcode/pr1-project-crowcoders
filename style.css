@@ -54,7 +54,7 @@ a {
 article { /* Game "container"*/
     /* float: left; */
     width: 700px;
-    min-height: 900px; 
+    min-height: 800px; /* Without min-height, there'll be white space at the bottom if the Content is not enough to fill the page */
     padding: 10px;
     background-color: bisque;
     margin: 20px 0px 20px 0px;
