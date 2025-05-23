@@ -11,7 +11,7 @@ The final program is not the goal! The aim of the project is to show how you hav
 
 > A description of how you want to present the project to the world <br>
 
-This project conists of two parts: A Website and a Game. The website is mainy used as a way to "host" the game. The game is based on the game *Glimmer & Gloom* that's featured on the site Flight Rising. This game is in turn inspired by the game *Lights Out* (1995). A more accurate description might be that my game (*Lights Low*) aims to replicate *Glimmer & Gloom*, since the gameplay is more or less the same. 
+This project conists of two parts: A Website and a Game. The website is mainy used as a way to "host" the game, to mimic the way most webgames are displayed. The game is based on the game *Glimmer & Gloom* that's featured on the site Flight Rising. This game is in turn inspired by the game *Lights Out* (1995). A more accurate description might be that my game (*Lights Low*) aims to replicate *Glimmer & Gloom*, since the gameplay is more or less the same. 
 
 ## A reflection of the experiences you had while creating the project <br>
 
@@ -33,6 +33,8 @@ Pure programming wise, the main improvement I can think of would be optimizing t
 As for non-programming imporvements; if one is familiar with the original *Glimmer & Gloom*, the game is about helping one of the factions (either Light or Shadow), gain more territory by converting the tiles to their respective element/color. The game board is accompanied by creatures from both factions reacting to the amount of tiles of their respective colors as the game progresses. The original *Lights Out* also has a theme, turning the "lights" off.
 
 For my website and game, I would have liked to create some kind of "lore" to the game. Whilst *Lights Low* somewhat combines thematic aspects of the two aforementioned games, I feel like there could have been more ways to make this clear to the user or make it into more of its own thing. This could've been done by having more detailed visual assets, such as a more themed logo or background image(s) or some sort of game mascot. Another example would've been to have more written lore on the About page. I would also have liked to have a moves-counter that displayed how many times the user has clicked, as well as a traditional timer to let the user know how long it took for them to solve the board (these features exist in the original *Glimmer & Gloom*). Maybe I will return to add these after the course or if I ever attempt to re-write the code.
+
+Regarding the website, I didn't want it to become an afterthought compared to the program, but I also felt like I needed the game to exist to be able to properly design the website, beyond the basic/required features (additional pages, game display area etc.) Then the program took a long time to develop (see the tallied work hours below), so whilst the website has solid features and feels somewhat polished visually, there isn't a lot of content on the webpage. Ideally, I think having more pages and games as well as more developed text (lore) would help the website feel less like a liminal space. Adding more custom visual assets such as a mascot, more striking logo or a background that could hint at potential lore would be nice as well.
   
 ## A conclusion on the budget. Did you manage to stick to the budget? Why? / Why not? <br>
 
