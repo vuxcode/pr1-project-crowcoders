@@ -42,7 +42,7 @@ Regarding the website, I didn't want it to become an afterthought compared to th
 **Programming hours worked:** ~45 hrs. ( 2,805 min = 46.7 hrs).
 
 When looking at the hours above, they are more or less what I expected. <br>
-I am more of a visual learner, so the different concepts in HTML and CSS were easier to learn for me. Also, since I already had some experience with HTML, I had a more solid foundation to stand e.g. what terms to use when researching on my own. I also understood the information I came across (both online and on the course), faster.
+I am more of a visual learner, so the different concepts in HTML and CSS were easier to learn for me. Since I already had some experience with HTML, I had a more solid foundation to stand e.g. what terms to use when researching on my own. I also understood the information I came across (both online and on the course), faster.
 
 With programming, I had to spend more time making sure I understood things "from the start", in order to make sure I could reliably utilize them in my own project. Researching and testing out the different concepts I came across also took up a large chunk of time. We were taught to work in small steps and test at each of these steps. This workflow made sense to me, but since I have less programming experience, it was also another source of frustration at times. 
 
